@@ -114,16 +114,41 @@
           </Border>
         </Grid>
         <views:SettingsView IsVisible="{Binding SettingsVisible}" IsEnabled="{Binding !Profiles.IsShuttingDown}" />
-        <StackPanel IsVisible="{Binding AboutVisible}" Margin="30,26" Spacing="12">
-          <StackPanel Orientation="Horizontal" Spacing="14">
-            <Image Source="avares://AutoClicker/assets/branding/autoclicker-icon-64.png" Width="48" Height="48" Stretch="Uniform" />
-            <StackPanel VerticalAlignment="Center" Spacing="4">
-              <TextBlock Text="AutoClicker" FontSize="20" FontWeight="SemiBold" />
-              <TextBlock Text="{Binding Version}" Classes="hint" />
-            </StackPanel>
+        <ScrollViewer IsVisible="{Binding AboutVisible}" VerticalScrollBarVisibility="Auto">
+          <StackPanel Margin="0,0,6,0" Spacing="12">
+            <Border Classes="hero" Padding="20,16">
+              <StackPanel Orientation="Horizontal" Spacing="16">
+                <Image Source="avares://AutoClicker/assets/branding/autoclicker-icon-64.png" Width="56" Height="56" Stretch="Uniform" />
+                <StackPanel VerticalAlignment="Center" Spacing="3">
+                  <TextBlock Text="AutoClicker" FontSize="24" FontWeight="SemiBold" />
+                  <TextBlock Text="{DynamicResource About_Tagline}" FontSize="14" />
+                  <TextBlock Text="{Binding Version}" Classes="hint" />
+                </StackPanel>
+              </StackPanel>
+            </Border>
+            <Border Classes="card" Padding="18">
+              <StackPanel Spacing="8">
+                <TextBlock Text="{DynamicResource About_ProductDescription}" TextWrapping="Wrap" />
+                <TextBlock Text="{DynamicResource About_Features_Title}" Classes="section" Margin="0,6,0,0" />
+                <TextBlock Text="{DynamicResource About_Feature_Profiles}" TextWrapping="Wrap" />
+                <TextBlock Text="{DynamicResource About_Feature_Speed}" TextWrapping="Wrap" />
+                <TextBlock Text="{DynamicResource About_Feature_Modes}" TextWrapping="Wrap" />
+                <TextBlock Text="{DynamicResource About_Feature_Stats}" TextWrapping="Wrap" />
+                <TextBlock Text="{DynamicResource About_Feature_Themes}" TextWrapping="Wrap" />
+              </StackPanel>
+            </Border>
+            <Border Classes="card" Padding="18">
+              <StackPanel Spacing="6">
+                <TextBlock Text="{DynamicResource About_Shortcuts_Title}" Classes="section" />
+                <TextBlock Text="{DynamicResource About_Shortcuts_Text}" TextWrapping="Wrap" />
+                <TextBlock Text="{DynamicResource About_Links_Title}" Classes="section" Margin="0,8,0,0" />
+                <SelectableTextBlock Text="{DynamicResource About_Links_Site}" TextWrapping="Wrap" />
+                <SelectableTextBlock Text="{DynamicResource About_Links_Source}" TextWrapping="Wrap" />
+                <TextBlock Text="{DynamicResource About_License}" Classes="hint" Margin="0,8,0,0" />
+              </StackPanel>
+            </Border>
           </StackPanel>
-          <TextBlock Text="{DynamicResource About_ProductDescription}" TextWrapping="Wrap" />
-        </StackPanel>
+        </ScrollViewer>
       </Grid>
       <Border Grid.Row="2" Classes="bar" IsVisible="{Binding ProfilesVisible}">
         <Grid ColumnDefinitions="*,Auto">
