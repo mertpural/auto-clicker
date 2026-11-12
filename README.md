@@ -44,3 +44,7 @@ dotnet test AutoClicker.sln
 ```
 
 Teknik notlar için [CHANGELOG.md](CHANGELOG.md) ve `docs/` klasörüne bakın.
+
+## Lisans
+
+[MIT](LICENSE)
