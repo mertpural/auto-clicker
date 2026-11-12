@@ -1,6 +1,6 @@
 # AutoClicker
 
-Hafif, reklamsız, ücretsiz otomatik tıklayıcı. Şimdilik **macOS** için hazır, Windows sürümü sonra gelecek.
+Hafif, reklamsız, ücretsiz otomatik tıklayıcı. macOS ve Windows için.
 
 **İndir:** https://autoclicker-tr.netlify.app
 
