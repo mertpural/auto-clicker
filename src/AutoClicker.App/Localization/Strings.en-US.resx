@@ -1091,44 +1091,5 @@
   </data>
   <data name="Statistics_LocalOnly" xml:space="preserve"><value>Statistics are stored only on this device.</value></data>
   <data name="Ui_Permissions" xml:space="preserve"><value>Permissions</value></data>
-  <data name="About_Tagline" xml:space="preserve">
-    <value>You wait. It clicks.</value>
-  </data>
-  <data name="About_Features_Title" xml:space="preserve">
-    <value>What it does</value>
-  </data>
-  <data name="About_Feature_Profiles" xml:space="preserve">
-    <value>Profiles: save separate settings per game or task and drag to reorder.</value>
-  </data>
-  <data name="About_Feature_Speed" xml:space="preserve">
-    <value>Speed: 0.001 to 500 clicks per second (CPS); fixed or randomized interval.</value>
-  </data>
-  <data name="About_Feature_Modes" xml:space="preserve">
-    <value>Left, right and middle button; single or double click; toggle or hold.</value>
-  </data>
-  <data name="About_Feature_Stats" xml:space="preserve">
-    <value>Statistics: total clicks and active time are tracked.</value>
-  </data>
-  <data name="About_Feature_Themes" xml:space="preserve">
-    <value>Themes: Gece Neon, Sade Beyaz, Aurora Cam, Terminal, Oyun HUD and the classic colors.</value>
-  </data>
-  <data name="About_Shortcuts_Title" xml:space="preserve">
-    <value>Shortcuts</value>
-  </data>
-  <data name="About_Shortcuts_Text" xml:space="preserve">
-    <value>Start / stop: the key set in your profile (default F6). Emergency stop: F12.</value>
-  </data>
-  <data name="About_Links_Title" xml:space="preserve">
-    <value>Links</value>
-  </data>
-  <data name="About_Links_Site" xml:space="preserve">
-    <value>Download page: https://autoclicker-tr.netlify.app</value>
-  </data>
-  <data name="About_Links_Source" xml:space="preserve">
-    <value>Source code: https://github.com/mertpural/auto-clicker</value>
-  </data>
-  <data name="About_License" xml:space="preserve">
-    <value>MIT license · Free and ad-free</value>
-  </data>
 </root>
 
