@@ -1,0 +1,26 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>12</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <Product>AutoClicker</Product>
+    <AssemblyTitle>AutoClicker</AssemblyTitle>
+    <Description>AutoClicker desktop application</Description>
+    <ApplicationBundleIdentifier>com.mertpural.autoclicker</ApplicationBundleIdentifier>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PublishSingleFile>false</PublishSingleFile>
+    <Optimize Condition="'$(Configuration)' == 'Release'">true</Optimize>
+    <PathMap Condition="'$(Configuration)' == 'Release'">$(MSBuildThisFileDirectory)=/_/AutoClicker/</PathMap>
+    <ApplicationIcon Condition="'$(MSBuildProjectName)' == 'AutoClicker' and Exists('$(MSBuildThisFileDirectory)assets/branding/autoclicker.ico') and ('$(RuntimeIdentifier)' == 'win-x64' or '$(RuntimeIdentifier)' == 'win-arm64' or ('$(RuntimeIdentifier)' == '' and '$(OS)' == 'Windows_NT'))">$(MSBuildThisFileDirectory)assets/branding/autoclicker.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyMetadata Include="ApplicationBundleIdentifier" Value="$(ApplicationBundleIdentifier)" />
+  </ItemGroup>
+</Project>

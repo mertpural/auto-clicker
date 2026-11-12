@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleName</key><string>AutoClicker</string>
+  <key>CFBundleDisplayName</key><string>AutoClicker</string>
+  <key>CFBundleExecutable</key><string>AutoClicker</string>
+  <key>CFBundleIdentifier</key><string>@BUNDLE_ID@</string>
+  <key>CFBundleVersion</key><string>@VERSION@</string>
+  <key>CFBundleShortVersionString</key><string>@VERSION@</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleIconFile</key><string>autoclicker.icns</string>
+  <key>LSMinimumSystemVersion</key><string>11.0</string>
+  <key>NSHighResolutionCapable</key><true/>
+  <key>NSAppleEventsUsageDescription</key><string>AutoClicker needs permission to control the mouse and keyboard for automated clicking.</string>
+  <key>NSInputMonitoringUsageDescription</key><string>AutoClicker needs permission to listen for global start and stop keyboard shortcuts.</string>
+</dict>
+</plist>

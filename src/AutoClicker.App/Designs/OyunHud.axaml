@@ -1,0 +1,47 @@
+<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Oyun HUD design: shapes, tabs and surfaces. Colours come from ThemeService. -->
+    <Style Selector="Border.sidebar"><Setter Property="Width" Value="212" /></Style>
+
+    <Style Selector="TabItem.profile-tab">
+      <Setter Property="MinHeight" Value="36" /><Setter Property="Height" Value="38" />
+      <Setter Property="VerticalContentAlignment" Value="Center" /><Setter Property="FontSize" Value="14" />
+      <Setter Property="Padding" Value="14,6" /><Setter Property="Margin" Value="0,0,2,6" />
+      <Setter Property="BorderThickness" Value="0,0,0,3" />
+      <Setter Property="BorderBrush" Value="Transparent" /><Setter Property="Background" Value="Transparent" />
+      <Setter Property="Foreground" Value="{DynamicResource TextSecondary}" />
+      <Setter Property="Template">
+        <ControlTemplate TargetType="TabItem">
+          <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentPresenter Content="{TemplateBinding Header}" ContentTemplate="{TemplateBinding HeaderTemplate}"
+                              HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+          </Border>
+        </ControlTemplate>
+      </Setter>
+    </Style>
+    <Style Selector="TabItem.profile-tab:pointerover"><Setter Property="Foreground" Value="{DynamicResource TextPrimary}" /></Style>
+    <Style Selector="TabItem.profile-tab:selected">
+      <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" /><Setter Property="Foreground" Value="{DynamicResource TextPrimary}" />
+      <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style Selector="ListBoxItem">
+      <Setter Property="Padding" Value="12,0" /><Setter Property="CornerRadius" Value="2" /><Setter Property="Margin" Value="0,2" />
+    </Style>
+    <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter"><Setter Property="Background" Value="{DynamicResource SurfaceElevated}" /></Style>
+    <Style Selector="ListBoxItem:selected /template/ ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource SelectionBrush}" /><Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" />
+      <Setter Property="BorderThickness" Value="4,0,0,0" />
+    </Style>
+
+    <Style Selector="Border.sidebar"><Setter Property="Background" Value="{DynamicResource SidebarBackground}" /><Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" /><Setter Property="BorderThickness" Value="0,0,2,0" /></Style>
+    <Style Selector="Border.hero"><Setter Property="Margin" Value="26,18,26,8" /><Setter Property="Padding" Value="20,14" /><Setter Property="Background" Value="{DynamicResource SurfaceBackground}" /><Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" /><Setter Property="BorderThickness" Value="5,0,0,0" /><Setter Property="CornerRadius" Value="2" /></Style>
+    <Style Selector="Border.card"><Setter Property="Margin" Value="26,0,26,12" /><Setter Property="Padding" Value="8,10" /><Setter Property="Background" Value="{DynamicResource SurfaceBackground}" /><Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" /><Setter Property="BorderThickness" Value="1,1,1,3" /><Setter Property="CornerRadius" Value="2" /></Style>
+    <Style Selector="Border.bar"><Setter Property="Padding" Value="26,12" /><Setter Property="Background" Value="{DynamicResource SidebarBackground}" /><Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}" /><Setter Property="BorderThickness" Value="0,2,0,0" /></Style>
+    <Style Selector="TextBlock.section"><Setter Property="FontWeight" Value="Bold" /><Setter Property="LetterSpacing" Value="1.2" /><Setter Property="Foreground" Value="{DynamicResource AccentBrush}" /></Style>
+    <Style Selector="Button.primary"><Setter Property="FontWeight" Value="Bold" /><Setter Property="MinHeight" Value="40" /><Setter Property="MinWidth" Value="140" /></Style>
+    <Style Selector="Button"><Setter Property="CornerRadius" Value="2" /></Style>
+    <Style Selector="TextBox"><Setter Property="CornerRadius" Value="2" /></Style>
+    <Style Selector="ComboBox"><Setter Property="CornerRadius" Value="2" /></Style>
+    <Style Selector="NumericUpDown"><Setter Property="CornerRadius" Value="2" /></Style>
+    <Style Selector="ToggleButton.nav"><Setter Property="CornerRadius" Value="2" /></Style>
+</Styles>

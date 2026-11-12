@@ -1,0 +1,1095 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About_ProductDescription" xml:space="preserve">
+    <value>Windows ve macOS için platformlar arası otomatik tıklama aracı.</value>
+  </data>
+  <data name="Common_Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="Common_Delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="Common_Exit" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="Common_Reset" xml:space="preserve">
+    <value>Sıfırla</value>
+  </data>
+  <data name="Common_Save" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="Dialog_DeleteProfile_Message" xml:space="preserve">
+    <value>“{0}” profili silinsin mi? Bu işlem geri alınamaz.</value>
+  </data>
+  <data name="Dialog_DeleteProfile_Title" xml:space="preserve">
+    <value>Profil silinsin mi?</value>
+  </data>
+  <data name="Dialog_ResetStatistics_Message" xml:space="preserve">
+    <value>Toplam tıklama ve aktif süre kalıcı olarak sıfırlanacak.</value>
+  </data>
+  <data name="Dialog_ResetStatistics_Title" xml:space="preserve">
+    <value>Kullanım istatistikleri sıfırlansın mı?</value>
+  </data>
+  <data name="Dialog_Unsaved_Message" xml:space="preserve">
+    <value>Bazı değişiklikler geçersiz veya kaydedilemedi. Kaydedilmemiş değişiklikleri atıp çıkmak istiyor musunuz?</value>
+  </data>
+  <data name="Dialog_Unsaved_Title" xml:space="preserve">
+    <value>Kaydedilmemiş değişiklikler</value>
+  </data>
+  <data name="Engine_Hold" xml:space="preserve">
+    <value>Basılı Tut</value>
+  </data>
+  <data name="Engine_Release" xml:space="preserve">
+    <value>Bırak</value>
+  </data>
+  <data name="Engine_Start" xml:space="preserve">
+    <value>Başlat</value>
+  </data>
+  <data name="Engine_Stop" xml:space="preserve">
+    <value>Durdur</value>
+  </data>
+  <data name="Enum_ClickMode_Hold" xml:space="preserve">
+    <value>Klavye ile Basılı Tut</value>
+  </data>
+  <data name="Enum_ClickMode_HoldMouseButton" xml:space="preserve">
+    <value>Mouse Tuşunu Basılı Tut</value>
+  </data>
+  <data name="Enum_ClickMode_MouseHold" xml:space="preserve">
+    <value>Mouse ile Tetikle</value>
+  </data>
+  <data name="Enum_ClickMode_Toggle" xml:space="preserve">
+    <value>Aç / Kapat</value>
+  </data>
+  <data name="Enum_ClickType_Double" xml:space="preserve">
+    <value>Çift Tıklama</value>
+  </data>
+  <data name="Enum_ClickType_Single" xml:space="preserve">
+    <value>Tek Tıklama</value>
+  </data>
+  <data name="Enum_Duration_Hours" xml:space="preserve">
+    <value>Saat</value>
+  </data>
+  <data name="Enum_Duration_Minutes" xml:space="preserve">
+    <value>Dakika</value>
+  </data>
+  <data name="Enum_Duration_Seconds" xml:space="preserve">
+    <value>Saniye</value>
+  </data>
+  <data name="Enum_MouseButton_Left" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="Enum_MouseButton_Middle" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="Enum_MouseButton_Right" xml:space="preserve">
+    <value>Sağ</value>
+  </data>
+  <data name="Enum_Position_CurrentCursor" xml:space="preserve">
+    <value>İmlecin Bulunduğu Yer</value>
+  </data>
+  <data name="Enum_Position_Fixed" xml:space="preserve">
+    <value>Sabit Konum</value>
+  </data>
+  <data name="Enum_ProfileColor_Blue" xml:space="preserve">
+    <value>Mavi</value>
+  </data>
+  <data name="Enum_ProfileColor_Gray" xml:space="preserve">
+    <value>Gri</value>
+  </data>
+  <data name="Enum_ProfileColor_Green" xml:space="preserve">
+    <value>Yeşil</value>
+  </data>
+  <data name="Enum_ProfileColor_Orange" xml:space="preserve">
+    <value>Turuncu</value>
+  </data>
+  <data name="Enum_ProfileColor_Pink" xml:space="preserve">
+    <value>Pembe</value>
+  </data>
+  <data name="Enum_ProfileColor_Purple" xml:space="preserve">
+    <value>Mor</value>
+  </data>
+  <data name="Enum_ProfileColor_Red" xml:space="preserve">
+    <value>Kırmızı</value>
+  </data>
+  <data name="Enum_ProfileColor_Teal" xml:space="preserve">
+    <value>Turkuaz</value>
+  </data>
+  <data name="Enum_ProfileColor_Yellow" xml:space="preserve">
+    <value>Sarı</value>
+  </data>
+  <data name="Error_DeleteProfile" xml:space="preserve">
+    <value>Profil silinemedi.</value>
+  </data>
+  <data name="Error_HeldButtonChange" xml:space="preserve">
+    <value>Profil değiştirmeden önce basılı mouse tuşunu bırakın.</value>
+  </data>
+  <data name="Error_HeldConfigChange" xml:space="preserve">
+    <value>Modu veya mouse tuşunu değiştirmeden önce basılı mouse tuşunu bırakın.</value>
+  </data>
+  <data name="Error_HoldRelease" xml:space="preserve">
+    <value>Basılı mouse tuşu bırakılamadı. Durdur’u veya Acil Durdurma’yı yeniden deneyin.</value>
+  </data>
+  <data name="Error_OpenFolder" xml:space="preserve">
+    <value>Yapılandırma klasörü açılamadı.</value>
+  </data>
+  <data name="Error_Save" xml:space="preserve">
+    <value>Değişiklikler kaydedilemedi. Ayrıntılar için uygulama günlüğüne bakın.</value>
+  </data>
+  <data name="Error_Shutdown" xml:space="preserve">
+    <value>Kapatma tamamlanamadı. Uygulama günlüğünü kontrol edip yeniden deneyin.</value>
+  </data>
+  <data name="Error_Startup" xml:space="preserve">
+    <value>AutoClicker başlatılamadı. Ayrıntılar için uygulama günlüğüne bakın.</value>
+  </data>
+  <data name="Error_StatsReset" xml:space="preserve">
+    <value>İstatistikler kaydedilemedi. Önceki toplamlar gösterilmeye devam ediyor.</value>
+  </data>
+  <data name="Error_StatsSave" xml:space="preserve">
+    <value>İstatistikler kaydedilemedi. Bellekte tutuluyor ve yeniden denenecek.</value>
+  </data>
+  <data name="Error_UnexpectedBackground" xml:space="preserve">
+    <value>Beklenmeyen bir arka plan hatası oluştu. Ayrıntılar için uygulama günlüğüne bakın.</value>
+  </data>
+  <data name="Error_UnsavedMouseHeld" xml:space="preserve">
+    <value>Mouse tuşu bırakılamadı. Acil Durdurma’yı yeniden deneyin; AutoClicker açık kalacak.</value>
+  </data>
+  <data name="Hotkey_PressCombination" xml:space="preserve">
+    <value>Bir tuş bileşimine basın… (İptal: Esc)</value>
+  </data>
+  <data name="Language_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Language_Turkish" xml:space="preserve">
+    <value>Türkçe</value>
+  </data>
+  <data name="Permission_Granted" xml:space="preserve">
+    <value>İzin verildi.</value>
+  </data>
+  <data name="Permission_Input" xml:space="preserve">
+    <value>Global kısayolları algılamak için Giriş İzleme izni gerekiyor.</value>
+  </data>
+  <data name="Permission_Mouse" xml:space="preserve">
+    <value>AutoClicker’ın mouse’u kontrol edebilmesi için Erişilebilirlik izni gerekiyor.</value>
+  </data>
+  <data name="Permission_OpenSettings" xml:space="preserve">
+    <value>Sistem Ayarları’nı Aç</value>
+  </data>
+  <data name="Permission_Required" xml:space="preserve">
+    <value>İzin gerekiyor.</value>
+  </data>
+  <data name="Permission_Retry" xml:space="preserve">
+    <value>Yeniden Dene</value>
+  </data>
+  <data name="Permission_Unavailable" xml:space="preserve">
+    <value>Bu platformda izin durumu kullanılamıyor.</value>
+  </data>
+  <data name="Position_Cancelled" xml:space="preserve">
+    <value>Konum seçimi iptal edildi. Koordinatlar değiştirilmedi.</value>
+  </data>
+  <data name="Position_PickActive" xml:space="preserve">
+    <value>Konum seçimi zaten etkin.</value>
+  </data>
+  <data name="Position_PickInstruction" xml:space="preserve">
+    <value>Konumu seçmek için ekranda bir yere tıklayın. İptal etmek için Esc tuşuna basın.</value>
+  </data>
+  <data name="Position_Selected" xml:space="preserve">
+    <value>Konum seçildi: {0}, {1}.</value>
+  </data>
+  <data name="Position_Unavailable" xml:space="preserve">
+    <value>Konum seçme aracı kullanılamıyor.</value>
+  </data>
+  <data name="Profile_Default" xml:space="preserve">
+    <value>Varsayılan</value>
+  </data>
+  <data name="Status_Error" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="Status_FixInvalid" xml:space="preserve">
+    <value>Kaydetmek için geçersiz alanları düzeltin</value>
+  </data>
+  <data name="Status_HoldingMouse" xml:space="preserve">
+    <value>{0} mouse tuşu basılı tutuluyor</value>
+  </data>
+  <data name="Status_LoadFailed" xml:space="preserve">
+    <value>Yükleme başarısız</value>
+  </data>
+  <data name="Status_Loading" xml:space="preserve">
+    <value>Yükleniyor…</value>
+  </data>
+  <data name="Status_NotSaved" xml:space="preserve">
+    <value>Kaydedilemedi</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>Hazır</value>
+  </data>
+  <data name="Status_Running" xml:space="preserve">
+    <value>Çalışıyor · {0} tıklama · {1} CPS</value>
+  </data>
+  <data name="Status_Saved" xml:space="preserve">
+    <value>Kaydedildi</value>
+  </data>
+  <data name="Status_Saving" xml:space="preserve">
+    <value>Kaydediliyor…</value>
+  </data>
+  <data name="Status_Starting" xml:space="preserve">
+    <value>Başlıyor · {0:0} sn</value>
+  </data>
+  <data name="Status_Stopping" xml:space="preserve">
+    <value>Durduruluyor…</value>
+  </data>
+  <data name="Tray_Open" xml:space="preserve">
+    <value>AutoClicker’ı Aç</value>
+  </data>
+  <data name="Tray_Profile" xml:space="preserve">
+    <value>Profil: {0}</value>
+  </data>
+  <data name="Tray_Quit" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="Tray_Status" xml:space="preserve">
+    <value>Durum: {0}</value>
+  </data>
+  <data name="Ui_About" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+  <data name="Ui_AboutDescription" xml:space="preserve">
+    <value>Windows ve macOS için platformlar arası otomatik tıklama aracı.</value>
+  </data>
+  <data name="Ui_AboutRepository" xml:space="preserve">
+    <value>Proje için henüz herkese açık bir GitHub deposu ayarlanmamış.</value>
+  </data>
+  <data name="Ui_AboutTagline" xml:space="preserve">
+    <value>Temel sürüm · profil yapılandırması ve kalıcılık</value>
+  </data>
+  <data name="Ui_ActiveTime" xml:space="preserve">
+    <value>Aktif Süre</value>
+  </data>
+  <data name="Ui_Advanced" xml:space="preserve">
+    <value>Gelişmiş seçenekler</value>
+  </data>
+  <data name="Ui_AutomaticStop" xml:space="preserve">
+    <value>Otomatik Durdurma</value>
+  </data>
+  <data name="Ui_Appearance" xml:space="preserve">
+    <value>Görünüm</value>
+  </data>
+  <data name="Ui_BurstCyclesAutomation" xml:space="preserve">
+    <value>Grup başına tıklama</value>
+  </data>
+  <data name="Ui_BurstPause" xml:space="preserve">
+    <value>Gruplar arasında bekle</value>
+  </data>
+  <data name="Ui_BurstPauseAutomation" xml:space="preserve">
+    <value>Gruplar arası bekleme (ms)</value>
+  </data>
+  <data name="Ui_BurstPauseMilliseconds" xml:space="preserve">
+    <value>Gruplar arası bekleme (ms)</value>
+  </data>
+  <data name="Ui_Change" xml:space="preserve">
+    <value>Değiştir</value>
+  </data>
+  <data name="Ui_Click" xml:space="preserve">
+    <value>Tıklama</value>
+  </data>
+  <data name="Ui_ClickLimit" xml:space="preserve">
+    <value>Tıklama sayısına ulaşınca dur</value>
+  </data>
+  <data name="Ui_ClickLimitAutomation" xml:space="preserve">
+    <value>Fiziksel tıklama sınırı</value>
+  </data>
+  <data name="Ui_ClickMode" xml:space="preserve">
+    <value>Tıklama modu</value>
+  </data>
+  <data name="Ui_ClickModeAutomation" xml:space="preserve">
+    <value>Tıklama modu</value>
+  </data>
+  <data name="Ui_ClickPosition" xml:space="preserve">
+    <value>Tıklama konumu</value>
+  </data>
+  <data name="Ui_ClickType" xml:space="preserve">
+    <value>Tıklama türü</value>
+  </data>
+  <data name="Ui_ClickTypeAutomation" xml:space="preserve">
+    <value>Tıklama türü</value>
+  </data>
+  <data name="Ui_ClicksPerSecond" xml:space="preserve">
+    <value>Saniyedeki tıklama</value>
+  </data>
+  <data name="Ui_ConfirmDelete" xml:space="preserve">
+    <value>Profil silmeden önce onay iste</value>
+  </data>
+  <data name="Ui_Cps" xml:space="preserve">
+    <value>CPS</value>
+  </data>
+  <data name="Ui_CpsAutomation" xml:space="preserve">
+    <value>Saniyedeki tıklama</value>
+  </data>
+  <data name="Ui_CpsHelp" xml:space="preserve">
+    <value>Desteklenen hız: 0,001–500 CPS. Aralık değeri CPS ile birlikte değişir.</value>
+  </data>
+  <data name="Ui_CyclesPerBurst" xml:space="preserve">
+    <value>Grup başına tıklama</value>
+  </data>
+  <data name="Ui_Data" xml:space="preserve">
+    <value>Veriler</value>
+  </data>
+  <data name="Ui_DefaultProfile" xml:space="preserve">
+    <value>Varsayılan profil</value>
+  </data>
+  <data name="Ui_Delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="Ui_DoubleClickHelp" xml:space="preserve">
+    <value>Çift tıklama iki fiziksel tıklamadan oluşur. Grup boyutu tıklama döngülerini sayar; grup beklemesi normal döngü aralığından sonra eklenir.</value>
+  </data>
+  <data name="Ui_Duplicate" xml:space="preserve">
+    <value>Kopyasını Oluştur</value>
+  </data>
+  <data name="Ui_DurationAutomation" xml:space="preserve">
+    <value>Süre sınırı</value>
+  </data>
+  <data name="Ui_DurationLimit" xml:space="preserve">
+    <value>Süre dolunca dur</value>
+  </data>
+  <data name="Ui_DurationLimitLabel" xml:space="preserve">
+    <value>Süre sınırı</value>
+  </data>
+  <data name="Ui_DurationUnit" xml:space="preserve">
+    <value>Süre birimi</value>
+  </data>
+  <data name="Ui_DurationUnitAutomation" xml:space="preserve">
+    <value>Süre birimi</value>
+  </data>
+  <data name="Ui_EmergencyStop" xml:space="preserve">
+    <value>Acil durdurma</value>
+  </data>
+  <data name="Ui_General" xml:space="preserve">
+    <value>Genel</value>
+  </data>
+  <data name="Ui_GroupedClicking" xml:space="preserve">
+    <value>Gruplu Tıklama</value>
+  </data>
+  <data name="Ui_GlobalInputHelp" xml:space="preserve">
+    <value>AutoClicker açıkken global kısayollar ve mouse girişi izleme çalışır. Mouse ile Tetikle modu, AutoClicker tarafından üretilen tıklamaları yok sayar. Sabit konum, ana ekranın solundaki monitörlerde negatif değerler de içerebilen ekran geneli koordinatları kullanır.</value>
+  </data>
+  <data name="Ui_HoldHotkeyAutomation" xml:space="preserve">
+    <value>Basılı tutma ve bırakma kısayolunu değiştir</value>
+  </data>
+  <data name="Ui_HoldReleaseHotkey" xml:space="preserve">
+    <value>Basılı tut / bırak kısayolu</value>
+  </data>
+  <data name="Ui_Hotkeys" xml:space="preserve">
+    <value>Kısayollar</value>
+  </data>
+  <data name="Ui_Interval" xml:space="preserve">
+    <value>Aralık</value>
+  </data>
+  <data name="Ui_Language" xml:space="preserve">
+    <value>Dil</value>
+  </data>
+  <data name="Ui_LaunchStartup" xml:space="preserve">
+    <value>Oturum açtığımda AutoClicker’ı başlat</value>
+  </data>
+  <data name="Ui_MaxCpsAutomation" xml:space="preserve">
+    <value>En yüksek CPS</value>
+  </data>
+  <data name="Ui_MaximumCps" xml:space="preserve">
+    <value>En yüksek CPS</value>
+  </data>
+  <data name="Ui_Milliseconds" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="Ui_MinCpsAutomation" xml:space="preserve">
+    <value>En düşük CPS</value>
+  </data>
+  <data name="Ui_MinimizeToTray" xml:space="preserve">
+    <value>Kapatırken sistem tepsisine küçült</value>
+  </data>
+  <data name="Ui_MinimumCps" xml:space="preserve">
+    <value>En düşük CPS</value>
+  </data>
+  <data name="Ui_ModeShortcut" xml:space="preserve">
+    <value>MOD VE KISAYOL</value>
+  </data>
+  <data name="Ui_MouseButton" xml:space="preserve">
+    <value>Mouse tuşu</value>
+  </data>
+  <data name="Ui_MouseButtonAutomation" xml:space="preserve">
+    <value>Mouse tuşu</value>
+  </data>
+  <data name="Ui_MoveBottom" xml:space="preserve">
+    <value>En Alta Taşı</value>
+  </data>
+  <data name="Ui_MoveDown" xml:space="preserve">
+    <value>Aşağı Taşı</value>
+  </data>
+  <data name="Ui_MoveTop" xml:space="preserve">
+    <value>En Üste Taşı</value>
+  </data>
+  <data name="Ui_MoveUp" xml:space="preserve">
+    <value>Yukarı Taşı</value>
+  </data>
+  <data name="Ui_NewProfile" xml:space="preserve">
+    <value>+ Yeni Profil</value>
+  </data>
+  <data name="Ui_OpenConfiguration" xml:space="preserve">
+    <value>Yapılandırma klasörünü aç</value>
+  </data>
+  <data name="Ui_OpenSystemSettings" xml:space="preserve">
+    <value>Sistem Ayarları’nı Aç</value>
+  </data>
+  <data name="Ui_Pause" xml:space="preserve">
+    <value>Bekleme</value>
+  </data>
+  <data name="Ui_PhysicalClickLimit" xml:space="preserve">
+    <value>Fiziksel tıklama sınırı</value>
+  </data>
+  <data name="Ui_PhysicalClicks" xml:space="preserve">
+    <value>Tıklama sayısı</value>
+  </data>
+  <data name="Ui_PickPosition" xml:space="preserve">
+    <value>Konum Seç</value>
+  </data>
+  <data name="Ui_Platform" xml:space="preserve">
+    <value>PLATFORM</value>
+  </data>
+  <data name="Ui_PositionAutomation" xml:space="preserve">
+    <value>Tıklama konumu</value>
+  </data>
+  <data name="Ui_ProfileColor" xml:space="preserve">
+    <value>Profil rengi</value>
+  </data>
+  <data name="Ui_ProfileColorAutomation" xml:space="preserve">
+    <value>Profil rengi</value>
+  </data>
+  <data name="Ui_ProfileSettings" xml:space="preserve">
+    <value>Profil ayarları</value>
+  </data>
+  <data name="Ui_Profiles" xml:space="preserve">
+    <value>Profiller</value>
+  </data>
+  <data name="Ui_ProfilesAutomation" xml:space="preserve">
+    <value>Profiller</value>
+  </data>
+  <data name="Ui_Randomization" xml:space="preserve">
+    <value>Rastgele hız</value>
+  </data>
+  <data name="Ui_RandomizeInterval" xml:space="preserve">
+    <value>Tıklama aralığını rastgeleleştir</value>
+  </data>
+  <data name="Ui_RememberProfile" xml:space="preserve">
+    <value>Son seçilen profili hatırla</value>
+  </data>
+  <data name="Ui_Rename" xml:space="preserve">
+    <value>Yeniden Adlandır</value>
+  </data>
+  <data name="Ui_RenameProfileAutomation" xml:space="preserve">
+    <value>Profili yeniden adlandır</value>
+  </data>
+  <data name="Ui_RequestPermission" xml:space="preserve">
+    <value>İzin iste</value>
+  </data>
+  <data name="Ui_ResetStatistics" xml:space="preserve">
+    <value>İstatistikleri Sıfırla</value>
+  </data>
+  <data name="Ui_Retry" xml:space="preserve">
+    <value>Yeniden Dene</value>
+  </data>
+  <data name="Ui_RetryLoad" xml:space="preserve">
+    <value>Yüklemeyi yeniden dene</value>
+  </data>
+  <data name="Ui_RetrySave" xml:space="preserve">
+    <value>Kaydetmeyi yeniden dene</value>
+  </data>
+  <data name="Ui_ScreenX" xml:space="preserve">
+    <value>Ekran X</value>
+  </data>
+  <data name="Ui_ScreenXAutomation" xml:space="preserve">
+    <value>Sabit ekran X koordinatı</value>
+  </data>
+  <data name="Ui_ScreenY" xml:space="preserve">
+    <value>Ekran Y</value>
+  </data>
+  <data name="Ui_ScreenYAutomation" xml:space="preserve">
+    <value>Sabit ekran Y koordinatı</value>
+  </data>
+  <data name="Ui_Seconds" xml:space="preserve">
+    <value>saniye</value>
+  </data>
+  <data name="Ui_SetDefault" xml:space="preserve">
+    <value>Varsayılan Yap</value>
+  </data>
+  <data name="Ui_SetDefaultButton" xml:space="preserve">
+    <value>Varsayılan yap</value>
+  </data>
+  <data name="Ui_Settings" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="Ui_SettingsSubtitle" xml:space="preserve">
+    <value>Uygulama tercihleri</value>
+  </data>
+  <data name="Ui_SettingsTitle" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="Ui_Speed" xml:space="preserve">
+    <value>Hız</value>
+  </data>
+  <data name="Ui_StartDelay" xml:space="preserve">
+    <value>Başlamadan önce bekle</value>
+  </data>
+  <data name="Ui_Startup" xml:space="preserve">
+    <value>Başlangıç</value>
+  </data>
+  <data name="Ui_StartDelayAutomation" xml:space="preserve">
+    <value>Başlama gecikmesi (saniye)</value>
+  </data>
+  <data name="Ui_StartHotkeyAutomation" xml:space="preserve">
+    <value>Başlatma ve durdurma kısayolunu değiştir</value>
+  </data>
+  <data name="Ui_StartMinimized" xml:space="preserve">
+    <value>Simge durumunda başlat</value>
+  </data>
+  <data name="Ui_StartStopHotkey" xml:space="preserve">
+    <value>Başlat / durdur kısayolu</value>
+  </data>
+  <data name="Ui_Statistics" xml:space="preserve">
+    <value>İstatistik</value>
+  </data>
+  <data name="Ui_StatisticsStoppedOnly" xml:space="preserve">
+    <value>İstatistikler yalnızca tıklama motoru durduğunda sıfırlanabilir.</value>
+  </data>
+  <data name="Ui_SystemAppearance" xml:space="preserve">
+    <value>Sistem görünümünü işletim sisteminize göre ayarlar.</value>
+  </data>
+  <data name="Ui_Theme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="Ui_ThemeAutomation" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="Ui_TotalClicks" xml:space="preserve">
+    <value>Toplam Tıklama</value>
+  </data>
+  <data name="Ui_TriggerButton" xml:space="preserve">
+    <value>Tetikleyici mouse tuşu</value>
+  </data>
+  <data name="Ui_TriggerButtonAutomation" xml:space="preserve">
+    <value>Mouse ile tetikleme tuşu</value>
+  </data>
+  <data name="Validation_BurstDelay" xml:space="preserve">
+    <value>Grup beklemesi negatif olamaz.</value>
+  </data>
+  <data name="Validation_BurstSize" xml:space="preserve">
+    <value>Bir grup en az 1 tıklama içermeli.</value>
+  </data>
+  <data name="Validation_ClickLimit" xml:space="preserve">
+    <value>Etkin tıklama sınırı en az 1 olmalı.</value>
+  </data>
+  <data name="Validation_ClickMode" xml:space="preserve">
+    <value>Geçerli bir tıklama modu seçin.</value>
+  </data>
+  <data name="Validation_ClickType" xml:space="preserve">
+    <value>Geçerli bir tıklama türü seçin.</value>
+  </data>
+  <data name="Validation_CpsOrder" xml:space="preserve">
+    <value>En düşük CPS, en yüksek CPS değerini aşamaz.</value>
+  </data>
+  <data name="Validation_CpsRange" xml:space="preserve">
+    <value>Desteklenen hız 0,001 ile 500 CPS arasında olmalı.</value>
+  </data>
+  <data name="Validation_DuplicateProfileName" xml:space="preserve">
+    <value>Bu ada sahip bir profil zaten var. Profil adları büyük/küçük harfe duyarlı değildir.</value>
+  </data>
+  <data name="Validation_DurationLimit" xml:space="preserve">
+    <value>Etkin süre sınırı sıfırdan büyük olmalı.</value>
+  </data>
+  <data name="Validation_EmergencyHoldConflict" xml:space="preserve">
+    <value>Acil durdurma kısayolu, hiçbir basılı tutma / bırakma kısayoluyla aynı olamaz.</value>
+  </data>
+  <data name="Validation_EmergencyStartConflict" xml:space="preserve">
+    <value>Acil durdurma kısayolu, hiçbir başlatma / durdurma kısayoluyla aynı olamaz.</value>
+  </data>
+  <data name="Validation_FixedX" xml:space="preserve">
+    <value>Sabit X koordinatını girin.</value>
+  </data>
+  <data name="Validation_FixedY" xml:space="preserve">
+    <value>Sabit Y koordinatını girin.</value>
+  </data>
+  <data name="Validation_HoldHotkey" xml:space="preserve">
+    <value>Basılı tutma / bırakma kısayolu seçin.</value>
+  </data>
+  <data name="Validation_HoldMouseButton" xml:space="preserve">
+    <value>Geçerli bir basılı tutma tuşu seçin.</value>
+  </data>
+  <data name="Validation_HotkeyConflict" xml:space="preserve">
+    <value>Basılı tutma / bırakma ve başlatma / durdurma kısayolları farklı olmalı.</value>
+  </data>
+  <data name="Validation_HotkeyEmergencyConflict" xml:space="preserve">
+    <value>Bu kısayol Acil Durdurma için ayrılmıştır.</value>
+  </data>
+  <data name="Validation_IntervalRange" xml:space="preserve">
+    <value>Aralık 2 ile 1.000.000 ms arasında olmalı.</value>
+  </data>
+  <data name="Validation_MaximumCpsRange" xml:space="preserve">
+    <value>En yüksek hız 0,001 ile 500 CPS arasında olmalı.</value>
+  </data>
+  <data name="Validation_MinimumCpsRange" xml:space="preserve">
+    <value>En düşük hız 0,001 ile 500 CPS arasında olmalı.</value>
+  </data>
+  <data name="Validation_MouseButton" xml:space="preserve">
+    <value>Geçerli bir mouse tuşu seçin.</value>
+  </data>
+  <data name="Validation_PositionMode" xml:space="preserve">
+    <value>Geçerli bir konum modu seçin.</value>
+  </data>
+  <data name="Validation_ProfileColor" xml:space="preserve">
+    <value>Geçerli bir profil rengi seçin.</value>
+  </data>
+  <data name="Validation_ProfileCount" xml:space="preserve">
+    <value>Yapılandırma 1 ile 1000 profil içermeli.</value>
+  </data>
+  <data name="Validation_ProfileIdEmpty" xml:space="preserve">
+    <value>Profil kimliği boş olamaz.</value>
+  </data>
+  <data name="Validation_ProfileIdsUnique" xml:space="preserve">
+    <value>Profil kimlikleri benzersiz olmalı.</value>
+  </data>
+  <data name="Validation_ProfileNameLength" xml:space="preserve">
+    <value>Profil adı 1 ile 80 karakter arasında olmalı.</value>
+  </data>
+  <data name="Validation_ProfileNamesUnique" xml:space="preserve">
+    <value>Profil adları benzersiz olmalı.</value>
+  </data>
+  <data name="Validation_ProfileReferences" xml:space="preserve">
+    <value>Varsayılan ve seçili profiller mevcut olmalı.</value>
+  </data>
+  <data name="Validation_SettingsInvalid" xml:space="preserve">
+    <value>Uygulama ayarları geçersiz.</value>
+  </data>
+  <data name="Validation_StartDelay" xml:space="preserve">
+    <value>Başlama gecikmesi negatif olamaz.</value>
+  </data>
+  <data name="Validation_StartStopHotkey" xml:space="preserve">
+    <value>Başlatma / durdurma kısayolu seçin.</value>
+  </data>
+  <data name="Validation_StatisticsInvalid" xml:space="preserve">
+    <value>Kullanım istatistikleri geçersiz.</value>
+  </data>
+  <data name="Validation_UnsupportedVersion" xml:space="preserve">
+    <value>Bu yapılandırma desteklenmeyen bir uygulama sürümünde oluşturulmuş.</value>
+  </data>
+  <data name="Ui_IntervalAutomation" xml:space="preserve">
+    <value>Aralık (milisaniye)</value>
+  </data>
+  <data name="Enum_Appearance_System" xml:space="preserve">
+    <value>Sistem</value>
+  </data>
+  <data name="Enum_Appearance_Light" xml:space="preserve">
+    <value>Açık</value>
+  </data>
+  <data name="Enum_Appearance_Dark" xml:space="preserve">
+    <value>Koyu</value>
+  </data>
+  <data name="Status_EmergencyStop" xml:space="preserve">
+    <value>Acil durdurma: {0}</value>
+  </data>
+  <data name="Status_ProfileHotkey" xml:space="preserve">
+    <value>Profil: {0}</value>
+  </data>
+  <data name="Status_HoldHotkey" xml:space="preserve">
+    <value>Basılı tut / bırak: {0}</value>
+  </data>
+  <data name="Ui_LaunchUnavailable" xml:space="preserve">
+    <value>Oturum açılışında başlatma bu platformda kullanılamıyor.</value>
+  </data>
+  <data name="Ui_LaunchEnabled" xml:space="preserve">
+    <value>Oturum açılışında başlatma etkin.</value>
+  </data>
+  <data name="Ui_LaunchDisabled" xml:space="preserve">
+    <value>Oturum açılışında başlatma devre dışı.</value>
+  </data>
+  <data name="Ui_LaunchChangeError" xml:space="preserve">
+    <value>Oturum açılışında başlatma ayarı değiştirilemedi.</value>
+  </data>
+  <data name="Permission_MouseMissing" xml:space="preserve">
+    <value>Mouse’u kontrol etmek için Erişilebilirlik izni gerekiyor.</value>
+  </data>
+  <data name="Permission_InputMissing" xml:space="preserve">
+    <value>Global kısayollar için Giriş İzleme izni gerekiyor.</value>
+  </data>
+  <data name="Permission_AllGranted" xml:space="preserve">
+    <value>Mouse kontrolü ve global kısayollar için gerekli izinler verildi.</value>
+  </data>
+  <data name="Permission_SettingsHint" xml:space="preserve">
+    <value>AutoClicker’a Sistem Ayarları → Gizlilik ve Güvenlik bölümünden izin verin.</value>
+  </data>
+  <data name="Permission_PlatformUnavailable" xml:space="preserve">
+    <value>macOS native input yalnızca macOS üzerinde kullanılabilir.</value>
+  </data>
+  <data name="Permission_KeyboardMouseAvailable" xml:space="preserve">
+    <value>Global klavye ve mouse izleme kullanılabilir.</value>
+  </data>
+  <data name="Permission_KeyboardMouseStarting" xml:space="preserve">
+    <value>Global input izleme başlatılıyor.</value>
+  </data>
+  <data name="Permission_KeyboardMouseUnavailable" xml:space="preserve">
+    <value>Global input izleme kullanılamıyor.</value>
+  </data>
+  <data name="Permission_AlreadyGranted" xml:space="preserve">
+    <value>İzin zaten verilmiş.</value>
+  </data>
+  <data name="Permission_AccessibilitySettingsFailed" xml:space="preserve">
+    <value>macOS Gizlilik ve Güvenlik ayarları açılamadı. Sistem Ayarları → Gizlilik ve Güvenlik bölümünü elle açın.</value>
+  </data>
+  <data name="Position_MouseHoldMonitoringUnavailable" xml:space="preserve">
+    <value>Bu platformda Mouse ile Tetikle input izlemesi kullanılamıyor.</value>
+  </data>
+  <data name="Position_MouseHoldUnavailable" xml:space="preserve">
+    <value>Mouse ile Tetikle input izlemesi kullanılamıyor.</value>
+  </data>
+  <data name="Position_MouseHoldReady" xml:space="preserve">
+    <value>{0} mouse tuşunu basılı tutarak başlatın; bırakınca durur. Acil Durdurma etkin kalır.</value>
+  </data>
+  <data name="Position_PickUnavailable" xml:space="preserve">
+    <value>Konum seçme aracı kullanılamıyor.</value>
+  </data>
+  <data name="Position_PickFailed" xml:space="preserve">
+    <value>Ekran konumu seçilemedi.</value>
+  </data>
+  <data name="Error_CannotReleaseProfile" xml:space="preserve">
+    <value>Profil değiştirilmeden önce basılı mouse tuşu bırakılamadı.</value>
+  </data>
+  <data name="Error_CannotReleaseConfig" xml:space="preserve">
+    <value>Mod veya mouse tuşu değiştirilmeden önce basılı mouse tuşu bırakılamadı.</value>
+  </data>
+  <data name="Error_ClickExecution" xml:space="preserve">
+    <value>Tıklama işlemi başarısız oldu. Ayrıntılar için uygulama günlüğüne bakın.</value>
+  </data>
+  <data name="Error_ReleaseAfterInputError" xml:space="preserve">
+    <value>Bir input hatasından sonra basılı mouse tuşu bırakılamadı. Acil Durdurma’yı kullanıp yeniden deneyin.</value>
+  </data>
+  <data name="Error_HoldToggle" xml:space="preserve">
+    <value>Mouse tuşu basılı tutulamadı veya bırakılamadı.</value>
+  </data>
+  <data name="Error_StartClick" xml:space="preserve">
+    <value>Tıklama işlemi başlatılamadı.</value>
+  </data>
+  <data name="Error_OpenMacSettings" xml:space="preserve">
+    <value>macOS Gizlilik ve Güvenlik ayarları açılamadı.</value>
+  </data>
+  <data name="Error_RunGlobalHotkey" xml:space="preserve">
+    <value>Global kısayol çalıştırılamadı. Ayrıntılar için uygulama günlüğüne bakın.</value>
+  </data>
+  <data name="Error_MouseStillHeld" xml:space="preserve">
+    <value>Native mouse tuşu hâlâ basılı.</value>
+  </data>
+  <data name="Error_PickAlreadyActive" xml:space="preserve">
+    <value>Konum seçimi zaten etkin.</value>
+  </data>
+  <data name="Status_MouseHoldReady" xml:space="preserve">
+    <value>Başlamak için {0} tuşunu basılı tutun; durdurmak için bırakın. Acil Durdurma etkin kalır.</value>
+  </data>
+  <data name="Validation_AppSettingsInvalid" xml:space="preserve">
+    <value>Uygulama ayarları geçersiz.</value>
+  </data>
+  <data name="Unit_DayShort" xml:space="preserve">
+    <value> g</value>
+  </data>
+  <data name="Unit_HourShort" xml:space="preserve">
+    <value> sa</value>
+  </data>
+  <data name="Unit_MinuteShort" xml:space="preserve">
+    <value> dk</value>
+  </data>
+  <data name="Unit_SecondShort" xml:space="preserve">
+    <value> sn</value>
+  </data>
+  <data name="Hotkey_EmergencyNotInitialized" xml:space="preserve">
+    <value>Acil durdurma kısayolu başlatılmadı.</value>
+  </data>
+  <data name="Hotkey_ProfileNotInitialized" xml:space="preserve">
+    <value>Profil kısayolu başlatılmadı.</value>
+  </data>
+  <data name="Hotkey_NotInitialized" xml:space="preserve">
+    <value>Global kısayol başlatılmadı.</value>
+  </data>
+  <data name="Hotkey_EmergencyUnavailable" xml:space="preserve">
+    <value>Acil durdurma kısayolu kullanılamıyor.</value>
+  </data>
+  <data name="Hotkey_ProfileUnavailable" xml:space="preserve">
+    <value>Profil kısayolu kullanılamıyor.</value>
+  </data>
+  <data name="Hotkey_HoldUnavailable" xml:space="preserve">
+    <value>Basılı tutma / bırakma kısayolu kullanılamıyor.</value>
+  </data>
+  <data name="Hotkey_MouseHoldTrigger" xml:space="preserve">
+    <value>Mouse ile Tetikle modu seçili fiziksel mouse tuşunu kullanır.</value>
+  </data>
+  <data name="Hotkey_FixProfile" xml:space="preserve">
+    <value>Kısayolu etkinleştirmek için profil kısayolunu düzeltin.</value>
+  </data>
+  <data name="Hotkey_FixHold" xml:space="preserve">
+    <value>Kısayolu etkinleştirmek için basılı tutma / bırakma kısayolunu düzeltin.</value>
+  </data>
+  <data name="Error_LoadProfiles" xml:space="preserve">
+    <value>Profiller yüklenemedi. Ayrıntılar için uygulama günlüğüne bakın.</value>
+  </data>
+  <data name="Permission_WindowsNative" xml:space="preserve">
+    <value>Windows native mouse girişi ve global kısayollar kullanılabilir. Yönetici yetkisiyle çalışan bazı uygulamalar bu girişi reddedebilir.</value>
+  </data>
+  <data name="Permission_MacNative" xml:space="preserve">
+    <value>macOS, Quartz mouse olaylarını kullanır. Mouse kontrolü için Erişilebilirlik, global kısayollar için Giriş İzleme izni verin.</value>
+  </data>
+  <data name="Permission_OnlyMac" xml:space="preserve">
+    <value>macOS native input yalnızca macOS üzerinde kullanılabilir.</value>
+  </data>
+  <data name="Permission_GrantedBoth" xml:space="preserve">
+    <value>Mouse kontrolü ve global kısayollar için gerekli izinler verildi.</value>
+  </data>
+  <data name="Permission_GlobalAvailable" xml:space="preserve">
+    <value>Global klavye ve mouse izleme kullanılabilir.</value>
+  </data>
+  <data name="Permission_GlobalStarting" xml:space="preserve">
+    <value>Global input izleme başlatılıyor.</value>
+  </data>
+  <data name="Permission_GlobalUnavailable" xml:space="preserve">
+    <value>Global input izleme kullanılamıyor.</value>
+  </data>
+  <data name="Position_PickAlreadyActive" xml:space="preserve">
+    <value>Konum seçimi zaten etkin.</value>
+  </data>
+  <data name="About_Version" xml:space="preserve">
+    <value>Sürüm {0}</value>
+  </data>
+  <data name="Profile_NewName" xml:space="preserve">
+    <value>Yeni Profil</value>
+  </data>
+  <data name="Profile_CopyName" xml:space="preserve">
+    <value>{0} kopyası</value>
+  </data>
+  <data name="Error_PersistLoad" xml:space="preserve">
+    <value>Yapılandırma yüklenemedi. Var olan dosya korundu. Ayarlar dosyasını incelemek için yapılandırma klasörünü açıp yeniden deneyin.</value>
+  </data>
+  <data name="Error_PersistSave" xml:space="preserve">
+    <value>Yapılandırma kaydedilemedi. Yapılandırma klasörünün yazılabilir ve yeterli boş alana sahip olduğunu kontrol edin.</value>
+  </data>
+  <data name="Error_PersistStatsSave" xml:space="preserve">
+    <value>Kullanım istatistikleri kaydedilemedi. Yapılandırma klasörünün yazılabilir ve yeterli boş alana sahip olduğunu kontrol edin.</value>
+  </data>
+  <data name="Error_ConfigTooLarge" xml:space="preserve">
+    <value>Yapılandırma dosyası izin verilen boyutu aşıyor.</value>
+  </data>
+  <data name="Error_ConfigEmpty" xml:space="preserve">
+    <value>Yapılandırma dosyası boş.</value>
+  </data>
+  <data name="Error_ConfigLimit" xml:space="preserve">
+    <value>Yapılandırma dosyası izin verilen boyutu aşıyor.</value>
+  </data>
+  <data name="Hotkey_RegistrationFailed" xml:space="preserve">
+    <value>Kısayol kaydedilemedi. Global kısayol iznini ve kısayol çakışmalarını kontrol edin.</value>
+  </data>
+  <data name="Hotkey_GlobalUnavailable" xml:space="preserve">
+    <value>Bu platformda global kısayollar kullanılamıyor.</value>
+  </data>
+  <data name="Hotkey_ShuttingDown" xml:space="preserve">
+    <value>Uygulama kapanırken global kısayollar kullanılamaz.</value>
+  </data>
+  <data name="Hotkey_ReservedEmergency" xml:space="preserve">
+    <value>Bu kısayol Acil Durdurma için ayrılmıştır.</value>
+  </data>
+  <data name="Hotkey_HoldProfileConflict" xml:space="preserve">
+    <value>Basılı tutma / bırakma kısayolu, seçili profil kısayoluyla çakışıyor.</value>
+  </data>
+  <data name="Hotkey_EmergencyProfileConflict" xml:space="preserve">
+    <value>Acil Durdurma, profil kısayoluyla çakışıyor.</value>
+  </data>
+  <data name="Hotkey_ProfileEmergencyConflict" xml:space="preserve">
+    <value>Profil kısayolu Acil Durdurma ile aynı olamaz.</value>
+  </data>
+  <data name="Hotkey_ProfileHoldConflict" xml:space="preserve">
+    <value>Profil kısayolu, basılı tutma / bırakma kısayoluyla çakışıyor.</value>
+  </data>
+  <data name="Hotkey_HoldEmergencyConflict" xml:space="preserve">
+    <value>Basılı tutma / bırakma kısayolu Acil Durdurma için ayrılmıştır.</value>
+  </data>
+  <data name="Hotkey_HoldProfileConflictMac" xml:space="preserve">
+    <value>Basılı tutma / bırakma kısayolu profil kısayoluyla çakışıyor.</value>
+  </data>
+  <data name="Hotkey_EmergencyActionsConflict" xml:space="preserve">
+    <value>Acil Durdurma, profil eylemleriyle aynı kısayolu kullanamaz.</value>
+  </data>
+  <data name="Hotkey_OnlyMac" xml:space="preserve">
+    <value>Global kısayollar yalnızca macOS üzerinde kullanılabilir.</value>
+  </data>
+  <data name="Hotkey_EnableInputMonitoring" xml:space="preserve">
+    <value>AutoClicker için Sistem Ayarları → Gizlilik ve Güvenlik → Giriş İzleme iznini etkinleştirip yeniden deneyin.</value>
+  </data>
+  <data name="Hotkey_MacListenerFailed" xml:space="preserve">
+    <value>macOS global klavye dinleyicisi başlatılamadı. Giriş İzleme iznini kontrol edip yeniden deneyin.</value>
+  </data>
+  <data name="Hotkey_UnsupportedMacKey" xml:space="preserve">
+    <value>{0}, macOS global kısayolu olarak desteklenmiyor.</value>
+  </data>
+  <data name="Hotkey_ServiceStopped" xml:space="preserve">
+    <value>Global kısayol hizmeti artık kullanılamıyor.</value>
+  </data>
+  <data name="Ui_LaunchStatusUnavailable" xml:space="preserve">
+    <value>Oturum açılışında başlatma durumu alınamadı.</value>
+  </data>
+  <data name="Error_Background" xml:space="preserve">
+    <value>Beklenmeyen bir arka plan hatası oluştu. Ayrıntılar için uygulama günlüğünü kontrol edin.</value>
+  </data>
+  <data name="Hotkey_RecordingInvalid" xml:space="preserve">
+    <value>Bir harf, sayı veya işlev tuşu seçin. İptal etmek için Esc tuşuna basın.</value>
+  </data>
+  <data name="Tab_General" xml:space="preserve">
+    <value>Temel</value>
+  </data>
+  <data name="Tab_Advanced" xml:space="preserve">
+    <value>Gelişmiş</value>
+  </data>
+  <data name="Tab_Position" xml:space="preserve">
+    <value>Konum</value>
+  </data>
+  <data name="Tab_Statistics" xml:space="preserve">
+    <value>İstatistik</value>
+  </data>
+  <data name="Enum_Appearance_Night" xml:space="preserve">
+    <value>Gece</value>
+  </data>
+  <data name="Enum_Appearance_CrimsonGold" xml:space="preserve">
+    <value>Kızıl Altın</value>
+  </data>
+  <data name="Enum_Appearance_Graphite" xml:space="preserve">
+    <value>Grafit</value>
+  </data>
+  <data name="Enum_Appearance_GeceNeon" xml:space="preserve">
+    <value>Gece Neon</value>
+  </data>
+  <data name="Enum_Appearance_SadeBeyaz" xml:space="preserve">
+    <value>Sade Beyaz</value>
+  </data>
+  <data name="Enum_Appearance_AuroraCam" xml:space="preserve">
+    <value>Aurora Cam</value>
+  </data>
+  <data name="Enum_Appearance_Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="Enum_Appearance_OyunHud" xml:space="preserve">
+    <value>Oyun HUD</value>
+  </data>
+  <data name="ThemePreview_Design" xml:space="preserve">
+    <value>Tasarım teması: renkler ve yerleşim birlikte değişir</value>
+  </data>
+  <data name="Menu_AboutApp" xml:space="preserve">
+    <value>AutoClicker Hakkında</value>
+  </data>
+  <data name="Statistics_DeviceScope" xml:space="preserve">
+    <value>Bu cihazdaki toplam kullanım</value>
+  </data>
+  <data name="Shortcut_StartStop" xml:space="preserve">
+    <value>Başlat/Durdur: {0}</value>
+  </data>
+  <data name="Shortcut_HoldMouse" xml:space="preserve">
+    <value>Mouse tuşunu basılı tut: {0}</value>
+  </data>
+  <data name="Shortcut_Emergency" xml:space="preserve">
+    <value>Acil Durdur: {0}</value>
+  </data>
+  <data name="Ui_Burst" xml:space="preserve">
+    <value>Gruplar halinde tıkla</value>
+  </data>
+  <data name="Tooltip_ProfileColor" xml:space="preserve">
+    <value>Bu profil için renkli işaretçiyi seçin.</value>
+  </data>
+  <data name="Tooltip_ClickMode" xml:space="preserve">
+    <value>Tıklama biçimini ve mouse tuşunu nasıl kullanacağınızı belirler.</value>
+  </data>
+  <data name="Tooltip_Cps" xml:space="preserve">
+    <value>Saniyedeki tıklama sayısı. Desteklenen aralık: 0,001–500 CPS.</value>
+  </data>
+  <data name="Tooltip_Interval" xml:space="preserve">
+    <value>Ardışık tıklamalar arasındaki süre. CPS ile birlikte değişir.</value>
+  </data>
+  <data name="Tooltip_Randomization" xml:space="preserve">
+    <value>Tıklama hızını belirlediğiniz alt ve üst CPS değerleri arasında değiştirir.</value>
+  </data>
+  <data name="Tooltip_MinCps" xml:space="preserve">
+    <value>Rastgele hız için kullanılacak en düşük CPS.</value>
+  </data>
+  <data name="Tooltip_MaxCps" xml:space="preserve">
+    <value>Rastgele hızın üst sınırı; en fazla 500 CPS.</value>
+  </data>
+  <data name="Tooltip_StartDelay" xml:space="preserve">
+    <value>Tıklamadan önce bekleme süresi.</value>
+  </data>
+  <data name="Tooltip_ClickLimit" xml:space="preserve">
+    <value>Belirtilen tıklama sayısına ulaşınca durur.</value>
+  </data>
+  <data name="Tooltip_DurationLimit" xml:space="preserve">
+    <value>Belirtilen süre dolunca durur.</value>
+  </data>
+  <data name="Tooltip_Burst" xml:space="preserve">
+    <value>Tıklamaları gruplar halinde gönderip aralarda bekletir.</value>
+  </data>
+  <data name="Tooltip_BurstSize" xml:space="preserve">
+    <value>Her grupta gönderilecek tıklama sayısı.</value>
+  </data>
+  <data name="Tooltip_BurstPause" xml:space="preserve">
+    <value>Gruplar arasındaki bekleme süresi.</value>
+  </data>
+  <data name="Tooltip_CurrentCursor" xml:space="preserve">
+    <value>Tıklamalar imlecin bulunduğu konuma gönderilir.</value>
+  </data>
+  <data name="Tooltip_FixedPosition" xml:space="preserve">
+    <value>Ekranda sabit bir koordinat kullanır.</value>
+  </data>
+  <data name="Tooltip_MouseHoldButton" xml:space="preserve">
+    <value>Seçili mouse tuşunu basılı tutun; bırakınca tıklamalar durur.</value>
+  </data>
+  <data name="Tooltip_MouseHoldTrigger" xml:space="preserve">
+    <value>Bu fiziksel mouse tuşu basılıyken tıklamalar başlar.</value>
+  </data>
+  <data name="Tooltip_Shortcuts" xml:space="preserve">
+    <value>Kısayolları değiştirmek için ilgili alandaki Değiştir düğmesini kullanın.</value>
+  </data>
+  <data name="Tooltip_EmergencyStop" xml:space="preserve">
+    <value>Acil durdurma kısayolu çalışan tıklamaları hemen durdurur.</value>
+  </data>
+  <data name="Tooltip_ClickType" xml:space="preserve">
+    <value>Tek veya çift tıklama biçimini seçin. Çift tıklama art arda iki tıklama gönderir.</value>
+  </data>
+  <data name="Tooltip_HoldMouseButton" xml:space="preserve">
+    <value>Seçili mouse tuşunu basılı tutun; bıraktığınızda tıklamalar durur.</value>
+  </data>
+  <data name="ThemePreview_System" xml:space="preserve">
+    <value>İşletim sistemi görünümünü izler</value>
+  </data>
+  <data name="ThemePreview_Night" xml:space="preserve">
+    <value>Nötr koyu tonlar</value>
+  </data>
+  <data name="ThemePreview_CrimsonGold" xml:space="preserve">
+    <value>Nötr grafit, kızıl vurgu ve mat altın</value>
+  </data>
+  <data name="ThemePreview_Graphite" xml:space="preserve">
+    <value>Kömür ve çelik grisi</value>
+  </data>
+  <data name="ThemePreview_Light" xml:space="preserve">
+    <value>Yumuşak açık tonlar</value>
+  </data>
+  <data name="Statistics_LocalOnly" xml:space="preserve"><value>İstatistikler yalnızca bu cihazda saklanır.</value></data>
+  <data name="Ui_Permissions" xml:space="preserve"><value>İzinler</value></data>
+</root>
+

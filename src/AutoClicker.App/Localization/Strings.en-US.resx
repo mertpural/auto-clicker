@@ -1,0 +1,1095 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About_ProductDescription" xml:space="preserve">
+    <value>Cross-platform auto clicking utility for Windows and macOS.</value>
+  </data>
+  <data name="Common_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Common_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Common_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Common_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Dialog_DeleteProfile_Message" xml:space="preserve">
+    <value>Delete “{0}”? This cannot be undone.</value>
+  </data>
+  <data name="Dialog_DeleteProfile_Title" xml:space="preserve">
+    <value>Delete profile</value>
+  </data>
+  <data name="Dialog_ResetStatistics_Message" xml:space="preserve">
+    <value>This will permanently reset total clicks and active time to zero.</value>
+  </data>
+  <data name="Dialog_ResetStatistics_Title" xml:space="preserve">
+    <value>Reset usage statistics?</value>
+  </data>
+  <data name="Dialog_Unsaved_Message" xml:space="preserve">
+    <value>Some edits are invalid or could not be saved. Exit and discard unsaved changes?</value>
+  </data>
+  <data name="Dialog_Unsaved_Title" xml:space="preserve">
+    <value>Unsaved changes</value>
+  </data>
+  <data name="Engine_Hold" xml:space="preserve">
+    <value>Hold</value>
+  </data>
+  <data name="Engine_Release" xml:space="preserve">
+    <value>Release</value>
+  </data>
+  <data name="Engine_Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Engine_Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="Enum_ClickMode_Hold" xml:space="preserve">
+    <value>Keyboard Hold</value>
+  </data>
+  <data name="Enum_ClickMode_HoldMouseButton" xml:space="preserve">
+    <value>Hold Mouse Button</value>
+  </data>
+  <data name="Enum_ClickMode_MouseHold" xml:space="preserve">
+    <value>Mouse Hold Trigger</value>
+  </data>
+  <data name="Enum_ClickMode_Toggle" xml:space="preserve">
+    <value>Toggle</value>
+  </data>
+  <data name="Enum_ClickType_Double" xml:space="preserve">
+    <value>Double</value>
+  </data>
+  <data name="Enum_ClickType_Single" xml:space="preserve">
+    <value>Single</value>
+  </data>
+  <data name="Enum_Duration_Hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="Enum_Duration_Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="Enum_Duration_Seconds" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+  <data name="Enum_MouseButton_Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Enum_MouseButton_Middle" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="Enum_MouseButton_Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Enum_Position_CurrentCursor" xml:space="preserve">
+    <value>Current Cursor</value>
+  </data>
+  <data name="Enum_Position_Fixed" xml:space="preserve">
+    <value>Fixed Position</value>
+  </data>
+  <data name="Enum_ProfileColor_Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="Enum_ProfileColor_Gray" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="Enum_ProfileColor_Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="Enum_ProfileColor_Orange" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="Enum_ProfileColor_Pink" xml:space="preserve">
+    <value>Pink</value>
+  </data>
+  <data name="Enum_ProfileColor_Purple" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="Enum_ProfileColor_Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="Enum_ProfileColor_Teal" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="Enum_ProfileColor_Yellow" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="Error_DeleteProfile" xml:space="preserve">
+    <value>Unable to delete the profile.</value>
+  </data>
+  <data name="Error_HeldButtonChange" xml:space="preserve">
+    <value>Release the held mouse button before changing profiles.</value>
+  </data>
+  <data name="Error_HeldConfigChange" xml:space="preserve">
+    <value>Release the held mouse button before changing its mode or button.</value>
+  </data>
+  <data name="Error_HoldRelease" xml:space="preserve">
+    <value>The held mouse button could not be released. Retry Stop or Emergency Stop.</value>
+  </data>
+  <data name="Error_OpenFolder" xml:space="preserve">
+    <value>Unable to open the configuration folder.</value>
+  </data>
+  <data name="Error_Save" xml:space="preserve">
+    <value>Unable to save changes. See the application log for details.</value>
+  </data>
+  <data name="Error_Shutdown" xml:space="preserve">
+    <value>Unable to complete shutdown. Please retry after checking the application log.</value>
+  </data>
+  <data name="Error_Startup" xml:space="preserve">
+    <value>Unable to start AutoClicker. See the application log for details.</value>
+  </data>
+  <data name="Error_StatsReset" xml:space="preserve">
+    <value>Usage statistics could not be saved. Your previous totals are still shown.</value>
+  </data>
+  <data name="Error_StatsSave" xml:space="preserve">
+    <value>Usage statistics could not be saved. They remain in memory and will be retried.</value>
+  </data>
+  <data name="Error_UnexpectedBackground" xml:space="preserve">
+    <value>An unexpected background error occurred. See the application log for details.</value>
+  </data>
+  <data name="Error_UnsavedMouseHeld" xml:space="preserve">
+    <value>The mouse button could not be released. AutoClicker will stay open so you can retry Emergency Stop.</value>
+  </data>
+  <data name="Hotkey_PressCombination" xml:space="preserve">
+    <value>Press a key combination… (Esc to cancel)</value>
+  </data>
+  <data name="Language_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Language_Turkish" xml:space="preserve">
+    <value>Turkish</value>
+  </data>
+  <data name="Permission_Granted" xml:space="preserve">
+    <value>Permission granted.</value>
+  </data>
+  <data name="Permission_Input" xml:space="preserve">
+    <value>Input Monitoring permission is required to detect global shortcuts.</value>
+  </data>
+  <data name="Permission_Mouse" xml:space="preserve">
+    <value>AutoClicker needs Accessibility permission to control the mouse.</value>
+  </data>
+  <data name="Permission_OpenSettings" xml:space="preserve">
+    <value>Open System Settings</value>
+  </data>
+  <data name="Permission_Required" xml:space="preserve">
+    <value>Permission required.</value>
+  </data>
+  <data name="Permission_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Permission_Unavailable" xml:space="preserve">
+    <value>Permission status is unavailable on this platform.</value>
+  </data>
+  <data name="Position_Cancelled" xml:space="preserve">
+    <value>Position picking cancelled. Coordinates were not changed.</value>
+  </data>
+  <data name="Position_PickActive" xml:space="preserve">
+    <value>Position picking is already active.</value>
+  </data>
+  <data name="Position_PickInstruction" xml:space="preserve">
+    <value>Click anywhere to choose the position. Press Esc to cancel.</value>
+  </data>
+  <data name="Position_Selected" xml:space="preserve">
+    <value>Position selected: {0}, {1}.</value>
+  </data>
+  <data name="Position_Unavailable" xml:space="preserve">
+    <value>Position picking is unavailable.</value>
+  </data>
+  <data name="Profile_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="Status_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Status_FixInvalid" xml:space="preserve">
+    <value>Fix invalid fields to save</value>
+  </data>
+  <data name="Status_HoldingMouse" xml:space="preserve">
+    <value>Holding {0} Mouse Button</value>
+  </data>
+  <data name="Status_LoadFailed" xml:space="preserve">
+    <value>Load failed</value>
+  </data>
+  <data name="Status_Loading" xml:space="preserve">
+    <value>Loading…</value>
+  </data>
+  <data name="Status_NotSaved" xml:space="preserve">
+    <value>Not saved</value>
+  </data>
+  <data name="Status_Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="Status_Running" xml:space="preserve">
+    <value>Running · {0} clicks · {1} CPS</value>
+  </data>
+  <data name="Status_Saved" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="Status_Saving" xml:space="preserve">
+    <value>Saving…</value>
+  </data>
+  <data name="Status_Starting" xml:space="preserve">
+    <value>Starting · {0:0}s</value>
+  </data>
+  <data name="Status_Stopping" xml:space="preserve">
+    <value>Stopping…</value>
+  </data>
+  <data name="Tray_Open" xml:space="preserve">
+    <value>Open AutoClicker</value>
+  </data>
+  <data name="Tray_Profile" xml:space="preserve">
+    <value>Profile: {0}</value>
+  </data>
+  <data name="Tray_Quit" xml:space="preserve">
+    <value>Quit</value>
+  </data>
+  <data name="Tray_Status" xml:space="preserve">
+    <value>Status: {0}</value>
+  </data>
+  <data name="Ui_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Ui_AboutDescription" xml:space="preserve">
+    <value>Cross-platform auto clicking utility for Windows and macOS.</value>
+  </data>
+  <data name="Ui_AboutRepository" xml:space="preserve">
+    <value>The project has no public GitHub repository configured yet.</value>
+  </data>
+  <data name="Ui_AboutTagline" xml:space="preserve">
+    <value>Foundation release · profile configuration and persistence</value>
+  </data>
+  <data name="Ui_ActiveTime" xml:space="preserve">
+    <value>Active Time</value>
+  </data>
+  <data name="Ui_Advanced" xml:space="preserve">
+    <value>Advanced options</value>
+  </data>
+  <data name="Ui_AutomaticStop" xml:space="preserve">
+    <value>Automatic stop</value>
+  </data>
+  <data name="Ui_Appearance" xml:space="preserve">
+    <value>APPEARANCE</value>
+  </data>
+  <data name="Ui_BurstCyclesAutomation" xml:space="preserve">
+    <value>Clicks per group</value>
+  </data>
+  <data name="Ui_BurstPause" xml:space="preserve">
+    <value>Pause between groups</value>
+  </data>
+  <data name="Ui_BurstPauseAutomation" xml:space="preserve">
+    <value>Burst pause in milliseconds</value>
+  </data>
+  <data name="Ui_BurstPauseMilliseconds" xml:space="preserve">
+    <value>Burst pause in milliseconds</value>
+  </data>
+  <data name="Ui_Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="Ui_Click" xml:space="preserve">
+    <value>Clicking</value>
+  </data>
+  <data name="Ui_ClickLimit" xml:space="preserve">
+    <value>Stop after a click limit</value>
+  </data>
+  <data name="Ui_ClickLimitAutomation" xml:space="preserve">
+    <value>Physical click limit</value>
+  </data>
+  <data name="Ui_ClickMode" xml:space="preserve">
+    <value>Click mode</value>
+  </data>
+  <data name="Ui_ClickModeAutomation" xml:space="preserve">
+    <value>Click mode</value>
+  </data>
+  <data name="Ui_ClickPosition" xml:space="preserve">
+    <value>Click position</value>
+  </data>
+  <data name="Ui_ClickType" xml:space="preserve">
+    <value>Click type</value>
+  </data>
+  <data name="Ui_ClickTypeAutomation" xml:space="preserve">
+    <value>Click type</value>
+  </data>
+  <data name="Ui_ClicksPerSecond" xml:space="preserve">
+    <value>Clicks per second</value>
+  </data>
+  <data name="Ui_ConfirmDelete" xml:space="preserve">
+    <value>Confirm before deleting a profile</value>
+  </data>
+  <data name="Ui_Cps" xml:space="preserve">
+    <value>CPS</value>
+  </data>
+  <data name="Ui_CpsAutomation" xml:space="preserve">
+    <value>Clicks per second</value>
+  </data>
+  <data name="Ui_CpsHelp" xml:space="preserve">
+    <value>Supported speed: 0.001–500 CPS. The interval updates with CPS.</value>
+  </data>
+  <data name="Ui_CyclesPerBurst" xml:space="preserve">
+    <value>Clicks per group</value>
+  </data>
+  <data name="Ui_Data" xml:space="preserve">
+    <value>DATA</value>
+  </data>
+  <data name="Ui_DefaultProfile" xml:space="preserve">
+    <value>Default profile</value>
+  </data>
+  <data name="Ui_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Ui_DoubleClickHelp" xml:space="preserve">
+    <value>Double click means two physical clicks. Burst size counts click cycles; its pause is added after the normal cycle interval.</value>
+  </data>
+  <data name="Ui_Duplicate" xml:space="preserve">
+    <value>Duplicate</value>
+  </data>
+  <data name="Ui_DurationAutomation" xml:space="preserve">
+    <value>Duration limit</value>
+  </data>
+  <data name="Ui_DurationLimit" xml:space="preserve">
+    <value>Stop after a duration</value>
+  </data>
+  <data name="Ui_DurationLimitLabel" xml:space="preserve">
+    <value>Duration limit</value>
+  </data>
+  <data name="Ui_DurationUnit" xml:space="preserve">
+    <value>Duration unit</value>
+  </data>
+  <data name="Ui_DurationUnitAutomation" xml:space="preserve">
+    <value>Duration unit</value>
+  </data>
+  <data name="Ui_EmergencyStop" xml:space="preserve">
+    <value>Emergency stop</value>
+  </data>
+  <data name="Ui_General" xml:space="preserve">
+    <value>GENERAL</value>
+  </data>
+  <data name="Ui_GroupedClicking" xml:space="preserve">
+    <value>Grouped clicking</value>
+  </data>
+  <data name="Ui_GlobalInputHelp" xml:space="preserve">
+    <value>Global shortcuts and mouse input monitoring work while AutoClicker is open. Mouse Hold ignores AutoClicker-generated clicks. Fixed coordinates use screen-global coordinates, including negative values on monitors left of the primary display.</value>
+  </data>
+  <data name="Ui_HoldHotkeyAutomation" xml:space="preserve">
+    <value>Change hold and release hotkey</value>
+  </data>
+  <data name="Ui_HoldReleaseHotkey" xml:space="preserve">
+    <value>Hold / release hotkey</value>
+  </data>
+  <data name="Ui_Hotkeys" xml:space="preserve">
+    <value>Shortcuts</value>
+  </data>
+  <data name="Ui_Interval" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="Ui_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Ui_LaunchStartup" xml:space="preserve">
+    <value>Launch AutoClicker when I sign in</value>
+  </data>
+  <data name="Ui_MaxCpsAutomation" xml:space="preserve">
+    <value>Maximum CPS</value>
+  </data>
+  <data name="Ui_MaximumCps" xml:space="preserve">
+    <value>Maximum CPS</value>
+  </data>
+  <data name="Ui_Milliseconds" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="Ui_MinCpsAutomation" xml:space="preserve">
+    <value>Minimum CPS</value>
+  </data>
+  <data name="Ui_MinimizeToTray" xml:space="preserve">
+    <value>Minimize to tray when closing</value>
+  </data>
+  <data name="Ui_MinimumCps" xml:space="preserve">
+    <value>Minimum CPS</value>
+  </data>
+  <data name="Ui_ModeShortcut" xml:space="preserve">
+    <value>MODE &amp; SHORTCUT</value>
+  </data>
+  <data name="Ui_MouseButton" xml:space="preserve">
+    <value>Mouse button</value>
+  </data>
+  <data name="Ui_MouseButtonAutomation" xml:space="preserve">
+    <value>Mouse button</value>
+  </data>
+  <data name="Ui_MoveBottom" xml:space="preserve">
+    <value>Move to Bottom</value>
+  </data>
+  <data name="Ui_MoveDown" xml:space="preserve">
+    <value>Move Down</value>
+  </data>
+  <data name="Ui_MoveTop" xml:space="preserve">
+    <value>Move to Top</value>
+  </data>
+  <data name="Ui_MoveUp" xml:space="preserve">
+    <value>Move Up</value>
+  </data>
+  <data name="Ui_NewProfile" xml:space="preserve">
+    <value>+ New Profile</value>
+  </data>
+  <data name="Ui_OpenConfiguration" xml:space="preserve">
+    <value>Open configuration folder</value>
+  </data>
+  <data name="Ui_OpenSystemSettings" xml:space="preserve">
+    <value>Open System Settings</value>
+  </data>
+  <data name="Ui_Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="Ui_PhysicalClickLimit" xml:space="preserve">
+    <value>Physical click limit</value>
+  </data>
+  <data name="Ui_PhysicalClicks" xml:space="preserve">
+    <value>Click count</value>
+  </data>
+  <data name="Ui_PickPosition" xml:space="preserve">
+    <value>Pick Position</value>
+  </data>
+  <data name="Ui_Platform" xml:space="preserve">
+    <value>PLATFORM</value>
+  </data>
+  <data name="Ui_PositionAutomation" xml:space="preserve">
+    <value>Click position</value>
+  </data>
+  <data name="Ui_ProfileColor" xml:space="preserve">
+    <value>Profile color</value>
+  </data>
+  <data name="Ui_ProfileColorAutomation" xml:space="preserve">
+    <value>Profile color</value>
+  </data>
+  <data name="Ui_ProfileSettings" xml:space="preserve">
+    <value>Profile settings</value>
+  </data>
+  <data name="Ui_Profiles" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="Ui_ProfilesAutomation" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="Ui_Randomization" xml:space="preserve">
+    <value>Randomized speed</value>
+  </data>
+  <data name="Ui_RandomizeInterval" xml:space="preserve">
+    <value>Randomize interval</value>
+  </data>
+  <data name="Ui_RememberProfile" xml:space="preserve">
+    <value>Remember last selected profile</value>
+  </data>
+  <data name="Ui_Rename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="Ui_RenameProfileAutomation" xml:space="preserve">
+    <value>Rename profile</value>
+  </data>
+  <data name="Ui_RequestPermission" xml:space="preserve">
+    <value>Request permission</value>
+  </data>
+  <data name="Ui_ResetStatistics" xml:space="preserve">
+    <value>Reset Statistics</value>
+  </data>
+  <data name="Ui_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Ui_RetryLoad" xml:space="preserve">
+    <value>Retry load</value>
+  </data>
+  <data name="Ui_RetrySave" xml:space="preserve">
+    <value>Retry save</value>
+  </data>
+  <data name="Ui_ScreenX" xml:space="preserve">
+    <value>Screen X</value>
+  </data>
+  <data name="Ui_ScreenXAutomation" xml:space="preserve">
+    <value>Fixed screen X coordinate</value>
+  </data>
+  <data name="Ui_ScreenY" xml:space="preserve">
+    <value>Screen Y</value>
+  </data>
+  <data name="Ui_ScreenYAutomation" xml:space="preserve">
+    <value>Fixed screen Y coordinate</value>
+  </data>
+  <data name="Ui_Seconds" xml:space="preserve">
+    <value>seconds</value>
+  </data>
+  <data name="Ui_SetDefault" xml:space="preserve">
+    <value>Set as default</value>
+  </data>
+  <data name="Ui_SetDefaultButton" xml:space="preserve">
+    <value>Set default</value>
+  </data>
+  <data name="Ui_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Ui_SettingsSubtitle" xml:space="preserve">
+    <value>Application preferences</value>
+  </data>
+  <data name="Ui_SettingsTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Ui_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Ui_StartDelay" xml:space="preserve">
+    <value>Delay before starting</value>
+  </data>
+  <data name="Ui_Startup" xml:space="preserve">
+    <value>Start-up</value>
+  </data>
+  <data name="Ui_StartDelayAutomation" xml:space="preserve">
+    <value>Start delay in seconds</value>
+  </data>
+  <data name="Ui_StartHotkeyAutomation" xml:space="preserve">
+    <value>Change start stop hotkey</value>
+  </data>
+  <data name="Ui_StartMinimized" xml:space="preserve">
+    <value>Start minimized</value>
+  </data>
+  <data name="Ui_StartStopHotkey" xml:space="preserve">
+    <value>Start / stop hotkey</value>
+  </data>
+  <data name="Ui_Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="Ui_StatisticsStoppedOnly" xml:space="preserve">
+    <value>Statistics can only be reset while the click engine is stopped.</value>
+  </data>
+  <data name="Ui_SystemAppearance" xml:space="preserve">
+    <value>System follows your operating system’s appearance.</value>
+  </data>
+  <data name="Ui_Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Ui_ThemeAutomation" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Ui_TotalClicks" xml:space="preserve">
+    <value>Total Clicks</value>
+  </data>
+  <data name="Ui_TriggerButton" xml:space="preserve">
+    <value>Trigger mouse button</value>
+  </data>
+  <data name="Ui_TriggerButtonAutomation" xml:space="preserve">
+    <value>Mouse Hold trigger button</value>
+  </data>
+  <data name="Validation_BurstDelay" xml:space="preserve">
+    <value>Burst delay cannot be negative.</value>
+  </data>
+  <data name="Validation_BurstSize" xml:space="preserve">
+    <value>A burst must contain at least 1 click.</value>
+  </data>
+  <data name="Validation_ClickLimit" xml:space="preserve">
+    <value>Enabled click limit must be at least 1.</value>
+  </data>
+  <data name="Validation_ClickMode" xml:space="preserve">
+    <value>Choose a supported click mode.</value>
+  </data>
+  <data name="Validation_ClickType" xml:space="preserve">
+    <value>Choose a supported click type.</value>
+  </data>
+  <data name="Validation_CpsOrder" xml:space="preserve">
+    <value>Minimum CPS cannot exceed maximum CPS.</value>
+  </data>
+  <data name="Validation_CpsRange" xml:space="preserve">
+    <value>Supported speed must be between 0.001 and 500 CPS.</value>
+  </data>
+  <data name="Validation_DuplicateProfileName" xml:space="preserve">
+    <value>A profile with this name already exists. Names are not case-sensitive.</value>
+  </data>
+  <data name="Validation_DurationLimit" xml:space="preserve">
+    <value>Enabled duration limit must be greater than zero.</value>
+  </data>
+  <data name="Validation_EmergencyHoldConflict" xml:space="preserve">
+    <value>Emergency stop must differ from every hold/release shortcut.</value>
+  </data>
+  <data name="Validation_EmergencyStartConflict" xml:space="preserve">
+    <value>Emergency stop must differ from every start / stop shortcut.</value>
+  </data>
+  <data name="Validation_FixedX" xml:space="preserve">
+    <value>Enter a fixed X coordinate.</value>
+  </data>
+  <data name="Validation_FixedY" xml:space="preserve">
+    <value>Enter a fixed Y coordinate.</value>
+  </data>
+  <data name="Validation_HoldHotkey" xml:space="preserve">
+    <value>Choose a hold/release shortcut.</value>
+  </data>
+  <data name="Validation_HoldMouseButton" xml:space="preserve">
+    <value>Choose a supported hold button.</value>
+  </data>
+  <data name="Validation_HotkeyConflict" xml:space="preserve">
+    <value>Hold/release and start/stop shortcuts must be different.</value>
+  </data>
+  <data name="Validation_HotkeyEmergencyConflict" xml:space="preserve">
+    <value>Hold/release shortcut is reserved for Emergency Stop.</value>
+  </data>
+  <data name="Validation_IntervalRange" xml:space="preserve">
+    <value>Interval must be between 2 and 1,000,000 ms.</value>
+  </data>
+  <data name="Validation_MaximumCpsRange" xml:space="preserve">
+    <value>Maximum speed must be between 0.001 and 500 CPS.</value>
+  </data>
+  <data name="Validation_MinimumCpsRange" xml:space="preserve">
+    <value>Minimum speed must be between 0.001 and 500 CPS.</value>
+  </data>
+  <data name="Validation_MouseButton" xml:space="preserve">
+    <value>Choose a supported mouse button.</value>
+  </data>
+  <data name="Validation_PositionMode" xml:space="preserve">
+    <value>Choose a supported position mode.</value>
+  </data>
+  <data name="Validation_ProfileColor" xml:space="preserve">
+    <value>Choose a supported profile color.</value>
+  </data>
+  <data name="Validation_ProfileCount" xml:space="preserve">
+    <value>Configuration must contain between 1 and 1000 profiles.</value>
+  </data>
+  <data name="Validation_ProfileIdEmpty" xml:space="preserve">
+    <value>Profile ID cannot be empty.</value>
+  </data>
+  <data name="Validation_ProfileIdsUnique" xml:space="preserve">
+    <value>Profile IDs must be unique.</value>
+  </data>
+  <data name="Validation_ProfileNameLength" xml:space="preserve">
+    <value>Enter a name between 1 and 80 characters.</value>
+  </data>
+  <data name="Validation_ProfileNamesUnique" xml:space="preserve">
+    <value>Profile names must be unique.</value>
+  </data>
+  <data name="Validation_ProfileReferences" xml:space="preserve">
+    <value>Default and selected profiles must exist.</value>
+  </data>
+  <data name="Validation_SettingsInvalid" xml:space="preserve">
+    <value>Application settings are invalid.</value>
+  </data>
+  <data name="Validation_StartDelay" xml:space="preserve">
+    <value>Start delay cannot be negative.</value>
+  </data>
+  <data name="Validation_StartStopHotkey" xml:space="preserve">
+    <value>Choose a start / stop shortcut.</value>
+  </data>
+  <data name="Validation_StatisticsInvalid" xml:space="preserve">
+    <value>Lifetime statistics are invalid.</value>
+  </data>
+  <data name="Validation_UnsupportedVersion" xml:space="preserve">
+    <value>This configuration was created with an unsupported application version.</value>
+  </data>
+  <data name="Ui_IntervalAutomation" xml:space="preserve">
+    <value>Interval in milliseconds</value>
+  </data>
+  <data name="Enum_Appearance_System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Enum_Appearance_Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Enum_Appearance_Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Status_EmergencyStop" xml:space="preserve">
+    <value>Emergency stop: {0}</value>
+  </data>
+  <data name="Status_ProfileHotkey" xml:space="preserve">
+    <value>Profile: {0}</value>
+  </data>
+  <data name="Status_HoldHotkey" xml:space="preserve">
+    <value>Hold/release: {0}</value>
+  </data>
+  <data name="Ui_LaunchUnavailable" xml:space="preserve">
+    <value>Launch at startup is unavailable.</value>
+  </data>
+  <data name="Ui_LaunchEnabled" xml:space="preserve">
+    <value>Launch on startup is enabled.</value>
+  </data>
+  <data name="Ui_LaunchDisabled" xml:space="preserve">
+    <value>Launch on startup is disabled.</value>
+  </data>
+  <data name="Ui_LaunchChangeError" xml:space="preserve">
+    <value>Launch on startup could not be changed.</value>
+  </data>
+  <data name="Permission_MouseMissing" xml:space="preserve">
+    <value>Accessibility permission is needed to control the mouse.</value>
+  </data>
+  <data name="Permission_InputMissing" xml:space="preserve">
+    <value>Input Monitoring is needed for global shortcuts.</value>
+  </data>
+  <data name="Permission_AllGranted" xml:space="preserve">
+    <value>Mouse control and global shortcuts are permitted.</value>
+  </data>
+  <data name="Permission_SettingsHint" xml:space="preserve">
+    <value>Enable AutoClicker in System Settings → Privacy &amp; Security.</value>
+  </data>
+  <data name="Permission_PlatformUnavailable" xml:space="preserve">
+    <value>macOS native input is available only on macOS.</value>
+  </data>
+  <data name="Permission_KeyboardMouseAvailable" xml:space="preserve">
+    <value>Global keyboard and mouse input monitoring is available.</value>
+  </data>
+  <data name="Permission_KeyboardMouseStarting" xml:space="preserve">
+    <value>Global input monitoring is starting.</value>
+  </data>
+  <data name="Permission_KeyboardMouseUnavailable" xml:space="preserve">
+    <value>Global input monitoring is unavailable.</value>
+  </data>
+  <data name="Permission_AlreadyGranted" xml:space="preserve">
+    <value>Permission already granted.</value>
+  </data>
+  <data name="Permission_AccessibilitySettingsFailed" xml:space="preserve">
+    <value>Could not open macOS Privacy &amp; Security settings. Open System Settings → Privacy &amp; Security manually.</value>
+  </data>
+  <data name="Position_MouseHoldMonitoringUnavailable" xml:space="preserve">
+    <value>Mouse Hold input monitoring is unavailable on this platform.</value>
+  </data>
+  <data name="Position_MouseHoldUnavailable" xml:space="preserve">
+    <value>Mouse Hold input monitoring is unavailable.</value>
+  </data>
+  <data name="Position_MouseHoldReady" xml:space="preserve">
+    <value>Hold {0} to start; release it to stop. Emergency Stop stays active.</value>
+  </data>
+  <data name="Position_PickUnavailable" xml:space="preserve">
+    <value>Position picking is unavailable.</value>
+  </data>
+  <data name="Position_PickFailed" xml:space="preserve">
+    <value>Unable to pick a screen position.</value>
+  </data>
+  <data name="Error_CannotReleaseProfile" xml:space="preserve">
+    <value>Release the held mouse button before changing profiles.</value>
+  </data>
+  <data name="Error_CannotReleaseConfig" xml:space="preserve">
+    <value>Release the held mouse button before changing its mode or button.</value>
+  </data>
+  <data name="Error_ClickExecution" xml:space="preserve">
+    <value>Click execution failed. See the application log for details.</value>
+  </data>
+  <data name="Error_ReleaseAfterInputError" xml:space="preserve">
+    <value>The held mouse button could not be released after an input error. Use Emergency Stop and retry.</value>
+  </data>
+  <data name="Error_HoldToggle" xml:space="preserve">
+    <value>Unable to hold or release the mouse button.</value>
+  </data>
+  <data name="Error_StartClick" xml:space="preserve">
+    <value>Unable to start click execution.</value>
+  </data>
+  <data name="Error_OpenMacSettings" xml:space="preserve">
+    <value>Unable to open macOS Privacy &amp; Security settings.</value>
+  </data>
+  <data name="Error_RunGlobalHotkey" xml:space="preserve">
+    <value>Unable to run the global shortcut. See the application log for details.</value>
+  </data>
+  <data name="Error_MouseStillHeld" xml:space="preserve">
+    <value>The native mouse button remains held.</value>
+  </data>
+  <data name="Error_PickAlreadyActive" xml:space="preserve">
+    <value>Position picking is already active.</value>
+  </data>
+  <data name="Status_MouseHoldReady" xml:space="preserve">
+    <value>Hold {0} to start; release it to stop. Emergency Stop stays active.</value>
+  </data>
+  <data name="Validation_AppSettingsInvalid" xml:space="preserve">
+    <value>Application settings are invalid.</value>
+  </data>
+  <data name="Unit_DayShort" xml:space="preserve">
+    <value>d</value>
+  </data>
+  <data name="Unit_HourShort" xml:space="preserve">
+    <value>h</value>
+  </data>
+  <data name="Unit_MinuteShort" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="Unit_SecondShort" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="Hotkey_EmergencyNotInitialized" xml:space="preserve">
+    <value>Emergency stop not initialized.</value>
+  </data>
+  <data name="Hotkey_ProfileNotInitialized" xml:space="preserve">
+    <value>Profile shortcut not initialized.</value>
+  </data>
+  <data name="Hotkey_NotInitialized" xml:space="preserve">
+    <value>Global shortcut not initialized.</value>
+  </data>
+  <data name="Hotkey_EmergencyUnavailable" xml:space="preserve">
+    <value>Emergency stop shortcut unavailable.</value>
+  </data>
+  <data name="Hotkey_ProfileUnavailable" xml:space="preserve">
+    <value>Profile shortcut unavailable.</value>
+  </data>
+  <data name="Hotkey_HoldUnavailable" xml:space="preserve">
+    <value>Hold/release shortcut unavailable.</value>
+  </data>
+  <data name="Hotkey_MouseHoldTrigger" xml:space="preserve">
+    <value>Mouse Hold Trigger uses the selected physical mouse button.</value>
+  </data>
+  <data name="Hotkey_FixProfile" xml:space="preserve">
+    <value>Fix the profile shortcut to enable it.</value>
+  </data>
+  <data name="Hotkey_FixHold" xml:space="preserve">
+    <value>Fix the hold/release shortcut to enable it.</value>
+  </data>
+  <data name="Error_LoadProfiles" xml:space="preserve">
+    <value>Unable to initialize profiles. See the application log for details.</value>
+  </data>
+  <data name="Permission_WindowsNative" xml:space="preserve">
+    <value>Windows native mouse input and global shortcuts are available. Elevated target applications may reject input.</value>
+  </data>
+  <data name="Permission_MacNative" xml:space="preserve">
+    <value>macOS uses Quartz mouse events. Enable Accessibility for mouse control and Input Monitoring for global shortcuts.</value>
+  </data>
+  <data name="Permission_OnlyMac" xml:space="preserve">
+    <value>macOS native input is available only on macOS.</value>
+  </data>
+  <data name="Permission_GrantedBoth" xml:space="preserve">
+    <value>Mouse control and global shortcuts are permitted.</value>
+  </data>
+  <data name="Permission_GlobalAvailable" xml:space="preserve">
+    <value>Global keyboard and mouse input monitoring is available.</value>
+  </data>
+  <data name="Permission_GlobalStarting" xml:space="preserve">
+    <value>Global input monitoring is starting.</value>
+  </data>
+  <data name="Permission_GlobalUnavailable" xml:space="preserve">
+    <value>Global input monitoring is unavailable.</value>
+  </data>
+  <data name="Position_PickAlreadyActive" xml:space="preserve">
+    <value>Position picking is already active.</value>
+  </data>
+  <data name="About_Version" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="Profile_NewName" xml:space="preserve">
+    <value>New profile</value>
+  </data>
+  <data name="Profile_CopyName" xml:space="preserve">
+    <value>{0} copy</value>
+  </data>
+  <data name="Error_PersistLoad" xml:space="preserve">
+    <value>Unable to load configuration. The existing file has been preserved. Open the configuration folder to inspect settings.json, then retry.</value>
+  </data>
+  <data name="Error_PersistSave" xml:space="preserve">
+    <value>Unable to save configuration. Check that the configuration folder is writable and has enough free space.</value>
+  </data>
+  <data name="Error_PersistStatsSave" xml:space="preserve">
+    <value>Unable to save usage statistics. Check that the configuration folder is writable and has enough free space.</value>
+  </data>
+  <data name="Error_ConfigTooLarge" xml:space="preserve">
+    <value>Configuration file is too large.</value>
+  </data>
+  <data name="Error_ConfigEmpty" xml:space="preserve">
+    <value>Configuration file is empty.</value>
+  </data>
+  <data name="Error_ConfigLimit" xml:space="preserve">
+    <value>Configuration exceeds the file size limit.</value>
+  </data>
+  <data name="Hotkey_RegistrationFailed" xml:space="preserve">
+    <value>The shortcut could not be registered. Check global shortcut permission and shortcut conflicts.</value>
+  </data>
+  <data name="Hotkey_GlobalUnavailable" xml:space="preserve">
+    <value>Global shortcuts are unavailable on this platform.</value>
+  </data>
+  <data name="Hotkey_ShuttingDown" xml:space="preserve">
+    <value>Global shortcuts are shutting down.</value>
+  </data>
+  <data name="Hotkey_ReservedEmergency" xml:space="preserve">
+    <value>This shortcut is reserved for emergency stop.</value>
+  </data>
+  <data name="Hotkey_HoldProfileConflict" xml:space="preserve">
+    <value>The hold/release shortcut conflicts with the selected profile shortcut.</value>
+  </data>
+  <data name="Hotkey_EmergencyProfileConflict" xml:space="preserve">
+    <value>Emergency stop conflicts with a profile shortcut.</value>
+  </data>
+  <data name="Hotkey_ProfileEmergencyConflict" xml:space="preserve">
+    <value>The profile shortcut cannot match Emergency Stop.</value>
+  </data>
+  <data name="Hotkey_ProfileHoldConflict" xml:space="preserve">
+    <value>The profile shortcut conflicts with the hold/release shortcut.</value>
+  </data>
+  <data name="Hotkey_HoldEmergencyConflict" xml:space="preserve">
+    <value>The hold/release shortcut is reserved for Emergency Stop.</value>
+  </data>
+  <data name="Hotkey_HoldProfileConflictMac" xml:space="preserve">
+    <value>The hold/release shortcut conflicts with the profile shortcut.</value>
+  </data>
+  <data name="Hotkey_EmergencyActionsConflict" xml:space="preserve">
+    <value>Emergency Stop must use a different shortcut from profile actions.</value>
+  </data>
+  <data name="Hotkey_OnlyMac" xml:space="preserve">
+    <value>Global shortcuts are available only on macOS.</value>
+  </data>
+  <data name="Hotkey_EnableInputMonitoring" xml:space="preserve">
+    <value>Enable AutoClicker under System Settings → Privacy &amp; Security → Input Monitoring, then retry.</value>
+  </data>
+  <data name="Hotkey_MacListenerFailed" xml:space="preserve">
+    <value>macOS could not create a global keyboard listener. Check Input Monitoring permission and retry.</value>
+  </data>
+  <data name="Hotkey_UnsupportedMacKey" xml:space="preserve">
+    <value>{0} is not supported as a macOS global shortcut.</value>
+  </data>
+  <data name="Hotkey_ServiceStopped" xml:space="preserve">
+    <value>The global shortcut service has been disposed.</value>
+  </data>
+  <data name="Ui_LaunchStatusUnavailable" xml:space="preserve">
+    <value>Launch at startup status is unavailable.</value>
+  </data>
+  <data name="Error_Background" xml:space="preserve">
+    <value>An unexpected background error occurred. Check the application log for details.</value>
+  </data>
+  <data name="Hotkey_RecordingInvalid" xml:space="preserve">
+    <value>Choose a letter, number, or function key. Press Esc to cancel.</value>
+  </data>
+  <data name="Tab_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Tab_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="Tab_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Tab_Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="Enum_Appearance_Night" xml:space="preserve">
+    <value>Night</value>
+  </data>
+  <data name="Enum_Appearance_CrimsonGold" xml:space="preserve">
+    <value>Crimson Gold</value>
+  </data>
+  <data name="Enum_Appearance_Graphite" xml:space="preserve">
+    <value>Graphite</value>
+  </data>
+  <data name="Enum_Appearance_GeceNeon" xml:space="preserve">
+    <value>Neon Night</value>
+  </data>
+  <data name="Enum_Appearance_SadeBeyaz" xml:space="preserve">
+    <value>Clean White</value>
+  </data>
+  <data name="Enum_Appearance_AuroraCam" xml:space="preserve">
+    <value>Aurora Glass</value>
+  </data>
+  <data name="Enum_Appearance_Terminal" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="Enum_Appearance_OyunHud" xml:space="preserve">
+    <value>Game HUD</value>
+  </data>
+  <data name="ThemePreview_Design" xml:space="preserve">
+    <value>Design theme: colours and layout change together</value>
+  </data>
+  <data name="Menu_AboutApp" xml:space="preserve">
+    <value>About AutoClicker</value>
+  </data>
+  <data name="Statistics_DeviceScope" xml:space="preserve">
+    <value>Lifetime usage on this device</value>
+  </data>
+  <data name="Shortcut_StartStop" xml:space="preserve">
+    <value>Start/Stop: {0}</value>
+  </data>
+  <data name="Shortcut_HoldMouse" xml:space="preserve">
+    <value>Hold Mouse Button: {0}</value>
+  </data>
+  <data name="Shortcut_Emergency" xml:space="preserve">
+    <value>Emergency Stop: {0}</value>
+  </data>
+  <data name="Ui_Burst" xml:space="preserve">
+    <value>Click in bursts</value>
+  </data>
+  <data name="Tooltip_ProfileColor" xml:space="preserve">
+    <value>Choose the color marker for this profile.</value>
+  </data>
+  <data name="Tooltip_ClickMode" xml:space="preserve">
+    <value>Choose how clicks run and how the mouse button is used.</value>
+  </data>
+  <data name="Tooltip_Cps" xml:space="preserve">
+    <value>Clicks per second. Supported range: 0.001–500 CPS.</value>
+  </data>
+  <data name="Tooltip_Interval" xml:space="preserve">
+    <value>Time between clicks. This stays in sync with CPS.</value>
+  </data>
+  <data name="Tooltip_Randomization" xml:space="preserve">
+    <value>Vary the click rate between the minimum and maximum CPS.</value>
+  </data>
+  <data name="Tooltip_MinCps" xml:space="preserve">
+    <value>Lowest CPS used by randomization.</value>
+  </data>
+  <data name="Tooltip_MaxCps" xml:space="preserve">
+    <value>Highest speed used by randomization, up to 500 CPS.</value>
+  </data>
+  <data name="Tooltip_StartDelay" xml:space="preserve">
+    <value>Wait this long before clicking starts.</value>
+  </data>
+  <data name="Tooltip_ClickLimit" xml:space="preserve">
+    <value>Stop after this many clicks.</value>
+  </data>
+  <data name="Tooltip_DurationLimit" xml:space="preserve">
+    <value>Stop when this duration has elapsed.</value>
+  </data>
+  <data name="Tooltip_Burst" xml:space="preserve">
+    <value>Send clicks in groups with a pause between groups.</value>
+  </data>
+  <data name="Tooltip_BurstSize" xml:space="preserve">
+    <value>Number of clicks sent in each group.</value>
+  </data>
+  <data name="Tooltip_BurstPause" xml:space="preserve">
+    <value>Pause between groups.</value>
+  </data>
+  <data name="Tooltip_CurrentCursor" xml:space="preserve">
+    <value>Clicks are sent to the current cursor position.</value>
+  </data>
+  <data name="Tooltip_FixedPosition" xml:space="preserve">
+    <value>Use a fixed screen coordinate.</value>
+  </data>
+  <data name="Tooltip_MouseHoldButton" xml:space="preserve">
+    <value>Hold the selected mouse button to click; release it to stop.</value>
+  </data>
+  <data name="Tooltip_MouseHoldTrigger" xml:space="preserve">
+    <value>Clicking starts while this physical mouse button is held.</value>
+  </data>
+  <data name="Tooltip_Shortcuts" xml:space="preserve">
+    <value>Use Change beside a shortcut to record a new key combination.</value>
+  </data>
+  <data name="Tooltip_EmergencyStop" xml:space="preserve">
+    <value>Emergency Stop immediately stops active clicking.</value>
+  </data>
+  <data name="Tooltip_ClickType" xml:space="preserve">
+    <value>Choose single or double clicks. A double click sends two clicks in sequence.</value>
+  </data>
+  <data name="Tooltip_HoldMouseButton" xml:space="preserve">
+    <value>Hold the selected mouse button to click; release it to stop.</value>
+  </data>
+  <data name="ThemePreview_System" xml:space="preserve">
+    <value>Follows the system appearance</value>
+  </data>
+  <data name="ThemePreview_Night" xml:space="preserve">
+    <value>Neutral dark tones</value>
+  </data>
+  <data name="ThemePreview_CrimsonGold" xml:space="preserve">
+    <value>Dark crimson and muted gold</value>
+  </data>
+  <data name="ThemePreview_Graphite" xml:space="preserve">
+    <value>Charcoal and muted steel</value>
+  </data>
+  <data name="ThemePreview_Light" xml:space="preserve">
+    <value>Soft light tones</value>
+  </data>
+  <data name="Statistics_LocalOnly" xml:space="preserve"><value>Statistics are stored only on this device.</value></data>
+  <data name="Ui_Permissions" xml:space="preserve"><value>Permissions</value></data>
+</root>
+

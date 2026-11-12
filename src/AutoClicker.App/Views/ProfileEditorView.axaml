@@ -1,0 +1,217 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:AutoClicker.App.ViewModels"
+             x:Class="AutoClicker.App.Views.ProfileEditorView"
+             x:DataType="vm:ProfileEditorViewModel">
+  <TabControl x:Name="EditorTabs" Classes="profile-tabs" SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay}" Background="Transparent" BorderThickness="0" Margin="6,2,6,0">
+    <TabItem Classes="profile-tab" Header="{DynamicResource Tab_General}">
+      <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="8,12,8,16" Width="{Binding #EditorTabs.Bounds.Width}" MaxWidth="620" HorizontalAlignment="Left" Spacing="9">
+          <TextBlock Text="{DynamicResource Ui_ProfileColor}" Classes="section" Margin="0,0,0,0" />
+          <ComboBox ItemsSource="{Binding ProfileColors}" SelectedItem="{Binding SelectedProfileColorOption, Mode=TwoWay}" Width="220"
+                    HorizontalAlignment="Left" AutomationProperties.Name="{DynamicResource Ui_ProfileColor}"
+                    ToolTip.Tip="{DynamicResource Tooltip_ProfileColor}">
+            <ComboBox.ItemTemplate><DataTemplate x:DataType="vm:LocalizedOption"><TextBlock Text="{Binding Label}" /></DataTemplate></ComboBox.ItemTemplate>
+          </ComboBox>
+
+          <TextBlock Text="{DynamicResource Ui_Click}" Classes="section" Margin="0,5,0,0" />
+          <Grid ColumnDefinitions="*,*" ColumnSpacing="16" RowDefinitions="Auto,Auto">
+            <StackPanel Spacing="5">
+              <TextBlock Text="{DynamicResource Ui_MouseButton}" Classes="hint" />
+              <ComboBox ItemsSource="{Binding MouseButtons}" SelectedItem="{Binding SelectedMouseButtonOption, Mode=TwoWay}" AutomationProperties.Name="{DynamicResource Ui_MouseButton}">
+                <ComboBox.ItemTemplate><DataTemplate x:DataType="vm:LocalizedOption"><TextBlock Text="{Binding Label}" /></DataTemplate></ComboBox.ItemTemplate>
+              </ComboBox>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Spacing="5">
+              <TextBlock Text="{DynamicResource Ui_ClickType}" Classes="hint" />
+              <ComboBox ItemsSource="{Binding ClickTypes}" SelectedItem="{Binding SelectedClickTypeOption, Mode=TwoWay}" IsEnabled="{Binding IsCpsModeEnabled}" AutomationProperties.Name="{DynamicResource Ui_ClickType}" ToolTip.Tip="{DynamicResource Tooltip_ClickType}">
+                <ComboBox.ItemTemplate><DataTemplate x:DataType="vm:LocalizedOption"><TextBlock Text="{Binding Label}" /></DataTemplate></ComboBox.ItemTemplate>
+              </ComboBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Spacing="5" Margin="0,9,0,0">
+              <TextBlock Text="{DynamicResource Ui_ClickMode}" Classes="hint" />
+              <ComboBox ItemsSource="{Binding ClickModeOptions}" SelectedItem="{Binding SelectedClickModeOption, Mode=TwoWay}" AutomationProperties.Name="{DynamicResource Ui_ClickMode}" ToolTip.Tip="{DynamicResource Tooltip_ClickMode}">
+                <ComboBox.ItemTemplate><DataTemplate x:DataType="vm:ClickModeOption"><TextBlock Text="{Binding Label}" /></DataTemplate></ComboBox.ItemTemplate>
+              </ComboBox>
+            </StackPanel>
+          </Grid>
+
+          <TextBlock Text="{DynamicResource Ui_Speed}" Classes="section" Margin="0,5,0,0" IsVisible="{Binding IsCpsModeEnabled}" />
+          <Grid ColumnDefinitions="*,*" ColumnSpacing="16" IsVisible="{Binding IsCpsModeEnabled}">
+            <StackPanel Spacing="5">
+              <TextBlock Text="{DynamicResource Ui_ClicksPerSecond}" Classes="hint" />
+              <Grid ColumnDefinitions="*,Auto">
+                <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding Cps, Mode=TwoWay}" Minimum="0.001" Maximum="500" Increment="0.1" FormatString="0.###" AutomationProperties.Name="{DynamicResource Ui_ClicksPerSecond}" ToolTip.Tip="{DynamicResource Tooltip_Cps}" />
+                <TextBlock Grid.Column="1" Text="{DynamicResource Ui_Cps}" Classes="hint" VerticalAlignment="Center" Margin="8,0,0,0" />
+              </Grid>
+              <TextBlock Text="{Binding CpsError}" Classes="error" />
+            </StackPanel>
+            <StackPanel Grid.Column="1" Spacing="5">
+              <TextBlock Text="{DynamicResource Ui_Interval}" Classes="hint" />
+              <Grid ColumnDefinitions="*,Auto">
+                <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding IntervalMilliseconds, Mode=TwoWay}" Minimum="2" Maximum="1000000" Increment="1" FormatString="0.###" AutomationProperties.Name="{DynamicResource Ui_IntervalAutomation}" ToolTip.Tip="{DynamicResource Tooltip_Interval}" />
+                <TextBlock Grid.Column="1" Text="{DynamicResource Ui_Milliseconds}" Classes="hint" VerticalAlignment="Center" Margin="8,0,0,0" />
+              </Grid>
+              <TextBlock Text="{Binding IntervalError}" Classes="error" />
+            </StackPanel>
+          </Grid>
+
+          <CheckBox Content="{DynamicResource Ui_RandomizeInterval}" IsChecked="{Binding RandomizationEnabled, Mode=TwoWay}" IsVisible="{Binding IsCpsModeEnabled}" ToolTip.Tip="{DynamicResource Tooltip_Randomization}" />
+          <Grid ColumnDefinitions="*,*" ColumnSpacing="16" IsVisible="{Binding IsRandomizationConfigurationEnabled}">
+            <StackPanel Spacing="5">
+              <TextBlock Text="{DynamicResource Ui_MinCpsAutomation}" Classes="hint" />
+              <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding MinimumCps, Mode=TwoWay}" Minimum="0.001" Maximum="500" Increment="0.1" FormatString="0.###" AutomationProperties.Name="{DynamicResource Ui_MinCpsAutomation}" ToolTip.Tip="{DynamicResource Tooltip_MinCps}" />
+            </StackPanel>
+            <StackPanel Grid.Column="1" Spacing="5">
+              <TextBlock Text="{DynamicResource Ui_MaxCpsAutomation}" Classes="hint" />
+              <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding MaximumCps, Mode=TwoWay}" Minimum="0.001" Maximum="500" Increment="0.1" FormatString="0.###" AutomationProperties.Name="{DynamicResource Ui_MaxCpsAutomation}" ToolTip.Tip="{DynamicResource Tooltip_MaxCps}" />
+            </StackPanel>
+            <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding RangeError}" Classes="error" />
+          </Grid>
+
+          <TextBlock Text="{DynamicResource Ui_Hotkeys}" Classes="section" Margin="0,5,0,0" />
+          <Grid ColumnDefinitions="*,*" ColumnSpacing="16" RowDefinitions="Auto,Auto">
+            <StackPanel Spacing="5" IsVisible="{Binding IsStartStopHotkeyVisible}">
+              <TextBlock Text="{DynamicResource Ui_StartStopHotkey}" Classes="hint" />
+              <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                <TextBlock Text="{Binding RecordingLabel}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" />
+                <Button Grid.Column="1" Content="{DynamicResource Ui_Change}" Command="{Binding RecordHotkeyCommand}" AutomationProperties.Name="{DynamicResource Ui_StartHotkeyAutomation}" />
+              </Grid>
+            </StackPanel>
+            <StackPanel Grid.ColumnSpan="2" Spacing="5" IsVisible="{Binding IsHoldMouseButtonMode}">
+              <TextBlock Text="{DynamicResource Ui_HoldReleaseHotkey}" Classes="hint" />
+              <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8" ToolTip.Tip="{DynamicResource Tooltip_HoldMouseButton}">
+                <TextBlock Text="{Binding RecordingLabel}" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" />
+                <Button Grid.Column="1" Content="{DynamicResource Ui_Change}" Command="{Binding RecordHoldMouseButtonHotkeyCommand}" AutomationProperties.Name="{DynamicResource Ui_HoldHotkeyAutomation}" />
+              </Grid>
+              <TextBlock Text="{Binding HoldMouseButtonHotkeyError}" Classes="error" TextWrapping="Wrap" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Spacing="4" Margin="0,8,0,0" IsVisible="{Binding IsMouseHold}">
+              <TextBlock Text="{DynamicResource Ui_TriggerButton}" Classes="hint" />
+              <ComboBox ItemsSource="{Binding HoldMouseButtons}" SelectedItem="{Binding SelectedHoldMouseButtonOption, Mode=TwoWay}" AutomationProperties.Name="{DynamicResource Ui_TriggerButtonAutomation}" ToolTip.Tip="{DynamicResource Tooltip_MouseHoldTrigger}">
+                <ComboBox.ItemTemplate><DataTemplate x:DataType="vm:LocalizedOption"><TextBlock Text="{Binding Label}" /></DataTemplate></ComboBox.ItemTemplate>
+              </ComboBox>
+              <TextBlock Text="{Binding MouseHoldStatus}" Classes="hint" TextWrapping="Wrap" />
+            </StackPanel>
+          </Grid>
+          <TextBlock Text="{Binding ClickModeError}" Classes="error" />
+          <TextBlock Text="{Binding HotkeyError}" Classes="error" />
+          <TextBlock Text="{Binding ValidationMessage}" Classes="error" TextWrapping="Wrap" IsVisible="{Binding !IsValid}" />
+        </StackPanel>
+      </ScrollViewer>
+    </TabItem>
+
+    <TabItem Classes="profile-tab" Header="{DynamicResource Tab_Advanced}">
+      <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="8,12,8,16" Width="{Binding #EditorTabs.Bounds.Width}" MaxWidth="620" HorizontalAlignment="Left" Spacing="12">
+          <Border Background="{DynamicResource SurfaceBackground}" CornerRadius="5" Padding="13,10" IsVisible="{Binding IsCpsModeEnabled}">
+            <StackPanel Spacing="7">
+              <TextBlock Text="{DynamicResource Ui_Startup}" Classes="section" Margin="0,0,0,1" />
+              <CheckBox Content="{DynamicResource Ui_StartDelay}" IsChecked="{Binding StartDelayEnabled, Mode=TwoWay}" ToolTip.Tip="{DynamicResource Tooltip_StartDelay}" />
+              <StackPanel Orientation="Horizontal" Spacing="8" IsEnabled="{Binding StartDelayEnabled}">
+                <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding StartDelaySeconds, Mode=TwoWay}" Minimum="0.001" Maximum="86400" Increment="0.5" FormatString="0.###" Width="150" AutomationProperties.Name="{DynamicResource Ui_StartDelayAutomation}" />
+                <TextBlock Text="{DynamicResource Ui_Seconds}" Classes="hint" VerticalAlignment="Center" />
+              </StackPanel>
+            </StackPanel>
+          </Border>
+
+          <Border Background="{DynamicResource SurfaceBackground}" CornerRadius="5" Padding="13,10" IsVisible="{Binding IsCpsModeEnabled}">
+            <StackPanel Spacing="7">
+              <TextBlock Text="{DynamicResource Ui_AutomaticStop}" Classes="section" Margin="0,0,0,1" />
+              <StackPanel Spacing="12">
+                <StackPanel Spacing="6">
+                  <CheckBox Content="{DynamicResource Ui_ClickLimit}" IsChecked="{Binding ClickLimitEnabled, Mode=TwoWay}" ToolTip.Tip="{DynamicResource Tooltip_ClickLimit}" />
+                  <StackPanel Orientation="Horizontal" Spacing="8" IsEnabled="{Binding ClickLimitEnabled}">
+                    <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding ClickLimit, Mode=TwoWay}" Minimum="1" Maximum="9223372036854775807" Increment="1" FormatString="0" Width="150" AutomationProperties.Name="{DynamicResource Ui_ClickLimitAutomation}" />
+                    <TextBlock Text="{DynamicResource Ui_PhysicalClicks}" Classes="hint" VerticalAlignment="Center" />
+                  </StackPanel>
+                </StackPanel>
+                <StackPanel Spacing="6">
+                  <CheckBox Content="{DynamicResource Ui_DurationLimit}" IsChecked="{Binding DurationLimitEnabled, Mode=TwoWay}" ToolTip.Tip="{DynamicResource Tooltip_DurationLimit}" />
+                  <StackPanel Orientation="Horizontal" Spacing="8" IsEnabled="{Binding DurationLimitEnabled}">
+                    <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding DurationAmount, Mode=TwoWay}" Minimum="0.001" Maximum="87600" Increment="1" FormatString="0.###" Width="128" AutomationProperties.Name="{DynamicResource Ui_DurationAutomation}" />
+                    <ComboBox ItemsSource="{Binding DurationUnitsOptions}" SelectedItem="{Binding SelectedDurationUnitOption, Mode=TwoWay}" Width="116" AutomationProperties.Name="{DynamicResource Ui_DurationUnit}">
+                      <ComboBox.ItemTemplate><DataTemplate x:DataType="vm:LocalizedOption"><TextBlock Text="{Binding Label}" /></DataTemplate></ComboBox.ItemTemplate>
+                    </ComboBox>
+                  </StackPanel>
+                </StackPanel>
+              </StackPanel>
+            </StackPanel>
+          </Border>
+
+          <Border Background="{DynamicResource SurfaceBackground}" CornerRadius="5" Padding="13,10" IsVisible="{Binding IsCpsModeEnabled}">
+            <StackPanel Spacing="7">
+              <TextBlock Text="{DynamicResource Ui_GroupedClicking}" Classes="section" Margin="0,0,0,1" />
+              <CheckBox Content="{DynamicResource Ui_BurstPause}" IsChecked="{Binding BurstEnabled, Mode=TwoWay}" ToolTip.Tip="{DynamicResource Tooltip_Burst}" />
+              <Grid ColumnDefinitions="*,*" ColumnSpacing="16" IsEnabled="{Binding BurstEnabled}">
+                <StackPanel Spacing="5">
+                  <TextBlock Text="{DynamicResource Ui_BurstCyclesAutomation}" Classes="hint" />
+                  <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding ClicksPerBurst, Mode=TwoWay}" Minimum="1" Maximum="2147483647" Increment="1" FormatString="0" AutomationProperties.Name="{DynamicResource Ui_BurstCyclesAutomation}" ToolTip.Tip="{DynamicResource Tooltip_BurstSize}" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Spacing="5">
+                  <TextBlock Text="{DynamicResource Ui_Pause}" Classes="hint" />
+                  <Grid ColumnDefinitions="*,Auto">
+                    <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding BurstDelayMilliseconds, Mode=TwoWay}" Minimum="0" Maximum="2147483647" Increment="100" FormatString="0" AutomationProperties.Name="{DynamicResource Ui_BurstPauseAutomation}" ToolTip.Tip="{DynamicResource Tooltip_BurstPause}" />
+                    <TextBlock Grid.Column="1" Text="{DynamicResource Ui_Milliseconds}" Classes="hint" VerticalAlignment="Center" Margin="8,0,0,0" />
+                  </Grid>
+                </StackPanel>
+              </Grid>
+            </StackPanel>
+          </Border>
+          <TextBlock Text="{Binding ValidationMessage}" Classes="error" TextWrapping="Wrap" IsVisible="{Binding !IsValid}" />
+        </StackPanel>
+      </ScrollViewer>
+    </TabItem>
+
+    <TabItem Classes="profile-tab" Header="{DynamicResource Tab_Position}">
+      <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="8,12,8,16" Width="{Binding #EditorTabs.Bounds.Width}" MaxWidth="460" HorizontalAlignment="Left" Spacing="12">
+          <TextBlock Text="{DynamicResource Ui_ClickPosition}" Classes="section" Margin="0,0,0,0" />
+          <ComboBox ItemsSource="{Binding PositionModes}" SelectedItem="{Binding SelectedPositionModeOption, Mode=TwoWay}" IsEnabled="{Binding IsCpsModeEnabled}" HorizontalAlignment="Stretch" AutomationProperties.Name="{DynamicResource Ui_ClickPosition}" ToolTip.Tip="{DynamicResource Tooltip_FixedPosition}">
+            <ComboBox.ItemTemplate><DataTemplate x:DataType="vm:LocalizedOption"><TextBlock Text="{Binding Label}" /></DataTemplate></ComboBox.ItemTemplate>
+          </ComboBox>
+          <TextBlock Text="{DynamicResource Tooltip_CurrentCursor}" Classes="hint" IsVisible="{Binding !IsFixedPosition}" />
+          <StackPanel IsVisible="{Binding IsFixedPosition}" IsEnabled="{Binding IsCpsModeEnabled}" Spacing="10">
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="16">
+              <StackPanel Spacing="5">
+                <TextBlock Text="{DynamicResource Ui_ScreenX}" Classes="hint" />
+                <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding FixedX, Mode=TwoWay}" Minimum="-2147483648" Maximum="2147483647" Increment="1" FormatString="0" AutomationProperties.Name="{DynamicResource Ui_ScreenXAutomation}" />
+              </StackPanel>
+              <StackPanel Grid.Column="1" Spacing="5">
+                <TextBlock Text="{DynamicResource Ui_ScreenY}" Classes="hint" />
+                <NumericUpDown NumberFormat="{Binding NumberFormat}" Value="{Binding FixedY, Mode=TwoWay}" Minimum="-2147483648" Maximum="2147483647" Increment="1" FormatString="0" AutomationProperties.Name="{DynamicResource Ui_ScreenYAutomation}" />
+              </StackPanel>
+            </Grid>
+            <Button Content="{DynamicResource Ui_PickPosition}" Command="{Binding PickPositionCommand}" HorizontalAlignment="Left" ToolTip.Tip="{DynamicResource Tooltip_FixedPosition}" />
+            <TextBlock Text="{DynamicResource Tooltip_FixedPosition}" Classes="hint" />
+          </StackPanel>
+          <TextBlock Text="{Binding PositionPickerStatus}" Classes="hint" TextWrapping="Wrap" IsVisible="{Binding HasPositionPickerStatus}" />
+          <TextBlock Text="{Binding ValidationMessage}" Classes="error" TextWrapping="Wrap" IsVisible="{Binding !IsValid}" />
+        </StackPanel>
+      </ScrollViewer>
+    </TabItem>
+
+    <TabItem Classes="profile-tab" Header="{DynamicResource Tab_Statistics}">
+      <StackPanel Margin="8,12,8,16" Width="{Binding #EditorTabs.Bounds.Width}" MaxWidth="560" HorizontalAlignment="Left" Spacing="10">
+        <TextBlock Text="{DynamicResource Ui_Statistics}" Classes="section" Margin="0,0,0,0" />
+        <TextBlock Text="{DynamicResource Statistics_DeviceScope}" Classes="hint" />
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="12" Margin="0,4,0,0">
+          <Border Background="{DynamicResource SurfaceElevated}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="5" Padding="14,12">
+          <StackPanel Spacing="5">
+            <TextBlock Text="{DynamicResource Ui_TotalClicks}" Classes="hint" />
+            <TextBlock Text="{Binding TotalClicksText}" FontSize="20" FontWeight="SemiBold" />
+          </StackPanel>
+          </Border>
+          <Border Grid.Column="1" Background="{DynamicResource SurfaceElevated}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="5" Padding="14,12">
+          <StackPanel Spacing="5">
+            <TextBlock Text="{DynamicResource Ui_ActiveTime}" Classes="hint" />
+            <TextBlock Text="{Binding TotalActiveTimeText}" FontSize="20" FontWeight="SemiBold" />
+          </StackPanel>
+          </Border>
+        </Grid>
+        <TextBlock Text="{DynamicResource Statistics_LocalOnly}" Classes="hint" Margin="0,6,0,0" />
+      </StackPanel>
+    </TabItem>
+  </TabControl>
+</UserControl>
+

@@ -1,0 +1,141 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AutoClicker.App.ViewModels"
+        xmlns:views="using:AutoClicker.App.Views"
+        x:Class="AutoClicker.App.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel" x:Name="Root"
+        Title="AutoClicker" Width="980" Height="760" MinWidth="820" MinHeight="620"
+        Icon="/assets/branding/autoclicker.ico"
+        WindowStartupLocation="CenterScreen">
+  <Grid x:Name="LayoutRoot" ColumnDefinitions="Auto,*" Background="Transparent" IsEnabled="{Binding !Profiles.IsShuttingDown}">
+    <Border Classes="sidebar">
+      <Grid RowDefinitions="Auto,Auto,*,Auto,Auto" Margin="14,24,14,16">
+        <StackPanel Orientation="Horizontal" Spacing="10" Margin="6,0,0,22" VerticalAlignment="Center">
+          <Image Source="avares://AutoClicker/assets/branding/autoclicker-icon-64.png" Width="28" Height="28" Stretch="Uniform" />
+          <TextBlock Text="AutoClicker" FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center" />
+        </StackPanel>
+        <Grid Grid.Row="1" Margin="0,0,0,8">
+          <ToggleButton Content="{DynamicResource Ui_Profiles}" Classes="nav" IsChecked="{Binding ProfilesNavigationSelected, Mode=OneWay}" Command="{Binding ShowProfilesCommand}" />
+          <Border HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Padding="8,1" CornerRadius="10" Background="{DynamicResource SelectionBrush}" IsHitTestVisible="False">
+            <TextBlock Text="{Binding Profiles.Items.Count}" FontSize="11" Foreground="{DynamicResource TextPrimary}" />
+          </Border>
+        </Grid>
+        <ListBox x:Name="ProfilesList" Grid.Row="2" ItemsSource="{Binding Profiles.Items}" SelectedItem="{Binding Profiles.SelectedProfile, Mode=TwoWay}"
+                 SelectionChanged="Profiles_SelectionChanged"
+                 Background="Transparent" BorderThickness="0" Padding="0" AutomationProperties.Name="{DynamicResource Ui_ProfilesAutomation}">
+          <ListBox.ItemTemplate>
+            <DataTemplate x:DataType="vm:ProfileEditorViewModel">
+              <Grid ColumnDefinitions="Auto,*,Auto,Auto" RowDefinitions="Auto" MinHeight="38"
+                    DragDrop.AllowDrop="True" DragDrop.DragOver="ProfileItem_DragOver"
+                    DragDrop.DragLeave="ProfileItem_DragLeave" DragDrop.Drop="ProfileItem_Drop"
+                    Background="Transparent" Opacity="{Binding DragOpacity}">
+                <Ellipse Width="7" Height="7" Fill="{Binding ProfileColorBrush}" VerticalAlignment="Center" Margin="1,0,8,0" IsVisible="{Binding !IsRenaming}" />
+                <TextBlock Grid.Column="1" Text="{Binding Name}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" IsVisible="{Binding !IsRenaming}" />
+                <TextBox x:Name="InlineProfileName" Grid.Column="1" Text="{Binding RenameText, Mode=TwoWay}" MaxLength="80"
+                         IsVisible="{Binding IsRenaming}" KeyDown="InlineProfileName_KeyDown"
+                         LostFocus="InlineProfileName_LostFocus" AutomationProperties.Name="{DynamicResource Ui_RenameProfileAutomation}" />
+                <TextBlock Grid.Column="2" Text="★" Foreground="{DynamicResource AccentBrush}" FontSize="12" VerticalAlignment="Center" IsVisible="{Binding IsDefault}" Margin="6,0" ToolTip.Tip="{DynamicResource Ui_DefaultProfile}" />
+                <Border x:Name="ProfileDragHandle" Grid.Column="3" Width="30" MinHeight="38" Background="Transparent" Margin="2,0,0,0"
+                           IsVisible="{Binding !IsRenaming}" PointerPressed="ProfileDragHandle_PointerPressed"
+                           PointerMoved="ProfileDragHandle_PointerMoved" PointerReleased="ProfileDragHandle_PointerReleased"
+                           PointerCaptureLost="ProfileDragHandle_PointerCaptureLost" Cursor="SizeAll">
+                  <TextBlock Text="⠿" Foreground="{DynamicResource TextSecondary}" Opacity="0.55" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False" />
+                </Border>
+                <Border Grid.ColumnSpan="4" Height="2" Background="{DynamicResource AccentBrush}"
+                        VerticalAlignment="Top" IsVisible="{Binding IsDropBefore}" IsHitTestVisible="False" />
+                <Border Grid.ColumnSpan="4" Height="2" Background="{DynamicResource AccentBrush}"
+                        VerticalAlignment="Bottom" IsVisible="{Binding IsDropAfter}" IsHitTestVisible="False" />
+              </Grid>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+          <ListBox.ContextMenu>
+            <ContextMenu DataContext="{Binding #Root.DataContext}" x:DataType="vm:MainWindowViewModel">
+              <MenuItem Header="{DynamicResource Ui_Rename}" Click="RenameProfile_Click" />
+              <MenuItem Header="{DynamicResource Ui_Duplicate}" Command="{Binding Profiles.DuplicateCommand}" CommandParameter="{Binding Profiles.SelectedProfile}" />
+              <MenuItem Header="{DynamicResource Ui_SetDefault}" Command="{Binding Profiles.MakeDefaultCommand}" CommandParameter="{Binding Profiles.SelectedProfile}" />
+              <Separator />
+              <MenuItem Header="{DynamicResource Ui_MoveUp}" Command="{Binding Profiles.MoveUpCommand}" CommandParameter="{Binding Profiles.SelectedProfile}" />
+              <MenuItem Header="{DynamicResource Ui_MoveDown}" Command="{Binding Profiles.MoveDownCommand}" CommandParameter="{Binding Profiles.SelectedProfile}" />
+              <MenuItem Header="{DynamicResource Ui_MoveTop}" Command="{Binding Profiles.MoveToTopCommand}" CommandParameter="{Binding Profiles.SelectedProfile}" />
+              <MenuItem Header="{DynamicResource Ui_MoveBottom}" Command="{Binding Profiles.MoveToBottomCommand}" CommandParameter="{Binding Profiles.SelectedProfile}" />
+              <Separator />
+              <MenuItem Header="{DynamicResource Common_Delete}" Command="{Binding Profiles.DeleteCommand}" CommandParameter="{Binding Profiles.SelectedProfile}" />
+            </ContextMenu>
+          </ListBox.ContextMenu>
+        </ListBox>
+        <Button Grid.Row="3" Content="{DynamicResource Ui_NewProfile}" Classes="flat" Command="{Binding Profiles.NewProfileCommand}" Margin="0,10,0,16" HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="{DynamicResource BorderBrush}" Foreground="{DynamicResource TextSecondary}" />
+        <StackPanel Grid.Row="4" Spacing="4">
+          <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,1,0,0" Margin="0,0,0,8" />
+          <ToggleButton Content="{DynamicResource Ui_Settings}" Classes="nav" IsChecked="{Binding SettingsNavigationSelected, Mode=OneWay}" Command="{Binding ShowSettingsCommand}" />
+          <ToggleButton Content="{DynamicResource Ui_About}" Classes="nav" IsChecked="{Binding AboutNavigationSelected, Mode=OneWay}" Command="{Binding ShowAboutCommand}" />
+        </StackPanel>
+      </Grid>
+    </Border>
+    <Grid Grid.Column="1" RowDefinitions="Auto,*,Auto">
+      <StackPanel Grid.Row="0">
+      <Border Margin="30,12,30,0" Padding="12" BorderThickness="1" BorderBrush="{DynamicResource DangerBrush}" CornerRadius="4" IsVisible="{Binding Profiles.ShowPermissionWarning}" Background="{DynamicResource SurfaceBackground}">
+        <StackPanel Spacing="10">
+          <TextBlock Text="{Binding Profiles.InputPermissionStatus}" Classes="error" TextWrapping="Wrap" />
+          <StackPanel Orientation="Horizontal" Spacing="8">
+            <Button Content="{DynamicResource Ui_RequestPermission}" Command="{Binding Profiles.RequestInputPermissionCommand}" />
+            <Button Content="{DynamicResource Permission_OpenSettings}" Command="{Binding Profiles.OpenInputPermissionSettingsCommand}" />
+            <Button Content="{DynamicResource Permission_Retry}" Command="{Binding Profiles.RetryInputPermissionCommand}" />
+          </StackPanel>
+        </StackPanel>
+      </Border>
+      <Border Margin="30,12,30,0" Padding="12" BorderThickness="1" BorderBrush="{DynamicResource DangerBrush}" CornerRadius="4" IsVisible="{Binding Profiles.HasError}" Background="{DynamicResource SurfaceBackground}">
+        <StackPanel Spacing="10">
+          <TextBlock Text="{Binding Profiles.ErrorMessage}" Classes="error" />
+          <StackPanel Orientation="Horizontal" Spacing="8">
+            <Button Content="{DynamicResource Ui_OpenConfiguration}" Command="{Binding Profiles.OpenConfigurationFolderCommand}" />
+            <Button Content="{DynamicResource Ui_RetryLoad}" Command="{Binding Profiles.InitializeCommand}" IsVisible="{Binding Profiles.CanRetryLoad}" />
+          </StackPanel>
+        </StackPanel>
+      </Border>
+      </StackPanel>
+      <Grid Grid.Row="1">
+        <Grid IsVisible="{Binding ProfilesVisible}" IsEnabled="{Binding Profiles.CanEdit}" RowDefinitions="Auto,*">
+          <Border Grid.Row="0" Classes="hero">
+          <StackPanel Spacing="5">
+            <Grid ColumnDefinitions="Auto,*,Auto">
+              <Ellipse Width="8" Height="8" Fill="{Binding Profiles.SelectedProfile.ProfileColorBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+              <TextBlock Grid.Column="1" Text="{Binding Profiles.SelectedProfile.Name}" FontSize="20" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+              <TextBlock Grid.Column="2" Text="{Binding Profiles.SelectedProfile.DefaultLabel}" Classes="hint" VerticalAlignment="Center" Margin="10,0,0,0" />
+            </Grid>
+            <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+              <Ellipse Width="7" Height="7" Fill="{Binding Profiles.EngineStatusBrush}" VerticalAlignment="Center" />
+              <TextBlock Text="{Binding Profiles.ProfileStatusText}" Classes="hint" VerticalAlignment="Center" />
+            </StackPanel>
+            <TextBlock Text="{Binding Profiles.ShortcutSummary}" Classes="hint" FontSize="12" TextTrimming="CharacterEllipsis" />
+          </StackPanel>
+          </Border>
+          <Border Grid.Row="1" Classes="card">
+            <views:ProfileEditorView x:Name="EditorView" DataContext="{Binding Profiles.SelectedProfile}" />
+          </Border>
+        </Grid>
+        <views:SettingsView IsVisible="{Binding SettingsVisible}" IsEnabled="{Binding !Profiles.IsShuttingDown}" />
+        <StackPanel IsVisible="{Binding AboutVisible}" Margin="30,26" Spacing="12">
+          <StackPanel Orientation="Horizontal" Spacing="14">
+            <Image Source="avares://AutoClicker/assets/branding/autoclicker-icon-64.png" Width="48" Height="48" Stretch="Uniform" />
+            <StackPanel VerticalAlignment="Center" Spacing="4">
+              <TextBlock Text="AutoClicker" FontSize="20" FontWeight="SemiBold" />
+              <TextBlock Text="{Binding Version}" Classes="hint" />
+            </StackPanel>
+          </StackPanel>
+          <TextBlock Text="{DynamicResource About_ProductDescription}" TextWrapping="Wrap" />
+        </StackPanel>
+      </Grid>
+      <Border Grid.Row="2" Classes="bar" IsVisible="{Binding ProfilesVisible}">
+        <Grid ColumnDefinitions="*,Auto">
+          <StackPanel Orientation="Horizontal" Spacing="6" IsVisible="{Binding ProfilesVisible}" VerticalAlignment="Center">
+            <TextBlock Text="{Binding Profiles.SaveStatus}" Classes="hint" VerticalAlignment="Center" Margin="0,0,8,0" />
+            <Button Content="{DynamicResource Ui_Duplicate}" Command="{Binding Profiles.DuplicateCommand}" CommandParameter="{Binding Profiles.SelectedProfile}" />
+            <Button Content="{DynamicResource Ui_SetDefaultButton}" Command="{Binding Profiles.MakeDefaultCommand}" CommandParameter="{Binding Profiles.SelectedProfile}" />
+            <Button Content="{DynamicResource Common_Delete}" Classes="danger" Command="{Binding Profiles.DeleteCommand}" CommandParameter="{Binding Profiles.SelectedProfile}" />
+          </StackPanel>
+          <Button Grid.Column="1" Content="{Binding Profiles.EngineButtonText}" Classes="primary" Command="{Binding Profiles.ToggleEngineCommand}" MinWidth="122" IsEnabled="{Binding Profiles.CanToggleEngine}" ToolTip.Tip="{Binding Profiles.NativeInputStatus}" IsVisible="{Binding ProfilesVisible}" />
+        </Grid>
+      </Border>
+    </Grid>
+  </Grid>
+</Window>

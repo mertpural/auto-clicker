@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>AutoClicker</AssemblyName>
+    <RootNamespace>AutoClicker.App</RootNamespace>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <ApplicationManifest>src/AutoClicker.App/app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="assets/branding/autoclicker.ico" />
+    <AvaloniaResource Include="assets/branding/autoclicker-icon-64.png" />
+    <Compile Include="src/AutoClicker.App/**/*.cs" Exclude="**/obj/**;**/bin/**" />
+    <PackageReference Include="Avalonia" Version="11.3.22" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.22" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.22" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+    <ProjectReference Include="src/AutoClicker.Core/AutoClicker.Core.csproj" />
+    <ProjectReference Include="src/AutoClicker.Platform.Windows/AutoClicker.Platform.Windows.csproj" />
+    <ProjectReference Include="src/AutoClicker.Platform.MacOS/AutoClicker.Platform.MacOS.csproj" />
+  </ItemGroup>
+</Project>

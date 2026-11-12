@@ -1,0 +1,99 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:AutoClicker.App.ViewModels"
+             x:Class="AutoClicker.App.Views.SettingsView"
+             x:DataType="vm:MainWindowViewModel">
+  <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+    <StackPanel Margin="26,18" MaxWidth="700" Spacing="9">
+      <TextBlock Text="{DynamicResource Ui_Settings}" FontSize="20" FontWeight="SemiBold" />
+      <TextBlock Text="{DynamicResource Ui_General}" Classes="section" Margin="0,8,0,0" />
+      <CheckBox Content="{DynamicResource Ui_RememberProfile}" IsChecked="{Binding Settings.RememberLastSelectedProfile, Mode=TwoWay}" />
+      <CheckBox Content="{DynamicResource Ui_ConfirmDelete}" IsChecked="{Binding Settings.ConfirmBeforeDeletingProfile, Mode=TwoWay}" />
+      <Grid ColumnDefinitions="*,*" ColumnSpacing="16">
+        <CheckBox Content="{DynamicResource Ui_LaunchStartup}" IsChecked="{Binding Settings.LaunchOnStartup, Mode=TwoWay}" IsEnabled="{Binding Settings.StartupRegistrationAvailable}" />
+        <CheckBox Grid.Column="1" Content="{DynamicResource Ui_StartMinimized}" IsChecked="{Binding Settings.StartMinimized, Mode=TwoWay}" />
+      </Grid>
+      <TextBlock Text="{Binding Settings.StartupRegistrationStatus}" Classes="hint" />
+      <TextBlock Text="{Binding Settings.LaunchOnStartupError}" Classes="error" />
+      <CheckBox Content="{DynamicResource Ui_MinimizeToTray}" IsChecked="{Binding Settings.MinimizeToTray, Mode=TwoWay}" />
+
+      <TextBlock Text="{DynamicResource Ui_Appearance}" Classes="section" Margin="0,8,0,0" />
+      <Grid ColumnDefinitions="160,*" Margin="0,2,0,0">
+        <TextBlock Text="{DynamicResource Ui_Language}" VerticalAlignment="Center" />
+        <ComboBox Grid.Column="1" Width="270" HorizontalAlignment="Left" ItemsSource="{Binding Settings.LanguageOptions}" SelectedItem="{Binding Settings.SelectedLanguageOption, Mode=TwoWay}" AutomationProperties.Name="{DynamicResource Ui_Language}">
+          <ComboBox.ItemTemplate><DataTemplate x:DataType="vm:LanguageOption"><TextBlock Text="{Binding Label}" /></DataTemplate></ComboBox.ItemTemplate>
+        </ComboBox>
+      </Grid>
+      <Grid ColumnDefinitions="160,*">
+        <TextBlock Text="{DynamicResource Ui_Theme}" VerticalAlignment="Center" />
+        <ComboBox Grid.Column="1" Width="270" HorizontalAlignment="Left" ItemsSource="{Binding Settings.AppearanceOptions}" SelectedItem="{Binding Settings.SelectedAppearanceOption, Mode=TwoWay}" AutomationProperties.Name="{DynamicResource Ui_Theme}">
+          <ComboBox.ItemTemplate><DataTemplate x:DataType="vm:LocalizedOption"><TextBlock Text="{Binding Label}" /></DataTemplate></ComboBox.ItemTemplate>
+        </ComboBox>
+      </Grid>
+      <StackPanel Orientation="Horizontal" Spacing="5" IsVisible="{Binding Settings.IsSystemTheme}">
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewLightBackground}" BorderBrush="{DynamicResource PreviewLightBorder}" BorderThickness="1" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewSystemDarkBackground}" BorderBrush="{DynamicResource PreviewSystemDarkBorder}" BorderThickness="1" CornerRadius="2" />
+        <TextBlock Text="{DynamicResource ThemePreview_System}" Classes="hint" VerticalAlignment="Center" Margin="6,0,0,0" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" Spacing="5" IsVisible="{Binding Settings.IsNightTheme}">
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewNightBackground}" BorderBrush="{DynamicResource PreviewNightAccent}" BorderThickness="1" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewNightAccent}" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewNightBorder}" CornerRadius="2" />
+        <TextBlock Text="{DynamicResource ThemePreview_Night}" Classes="hint" VerticalAlignment="Center" Margin="6,0,0,0" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" Spacing="5" IsVisible="{Binding Settings.IsCrimsonGoldTheme}">
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewCrimsonBackground}" BorderBrush="{DynamicResource PreviewCrimsonRed}" BorderThickness="1" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewCrimsonRed}" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewCrimsonGold}" CornerRadius="2" />
+        <TextBlock Text="{DynamicResource ThemePreview_CrimsonGold}" Classes="hint" VerticalAlignment="Center" Margin="6,0,0,0" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" Spacing="5" IsVisible="{Binding Settings.IsGraphiteTheme}">
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewGraphiteBackground}" BorderBrush="{DynamicResource PreviewGraphiteAccent}" BorderThickness="1" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewGraphiteSurface}" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewGraphiteAccent}" CornerRadius="2" />
+        <TextBlock Text="{DynamicResource ThemePreview_Graphite}" Classes="hint" VerticalAlignment="Center" Margin="6,0,0,0" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" Spacing="5" IsVisible="{Binding Settings.IsLightTheme}">
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewLightBackground}" BorderBrush="{DynamicResource PreviewLightBorder}" BorderThickness="1" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewLightSurface}" BorderBrush="{DynamicResource PreviewLightBorder}" BorderThickness="1" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource PreviewLightAccent}" CornerRadius="2" />
+        <TextBlock Text="{DynamicResource ThemePreview_Light}" Classes="hint" VerticalAlignment="Center" Margin="6,0,0,0" />
+      </StackPanel>
+
+      <StackPanel Orientation="Horizontal" Spacing="5" IsVisible="{Binding Settings.IsDesignTheme}">
+        <Border Width="24" Height="12" Background="{DynamicResource AppBackground}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource SurfaceBackground}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="2" />
+        <Border Width="24" Height="12" Background="{DynamicResource AccentBrush}" CornerRadius="2" />
+        <TextBlock Text="{DynamicResource ThemePreview_Design}" Classes="hint" VerticalAlignment="Center" Margin="6,0,0,0" />
+      </StackPanel>
+
+      <TextBlock Text="{DynamicResource Ui_Hotkeys}" Classes="section" Margin="0,8,0,0" />
+      <Grid ColumnDefinitions="160,*">
+        <TextBlock Text="{DynamicResource Ui_EmergencyStop}" VerticalAlignment="Center" />
+        <TextBlock Grid.Column="1" Text="{Binding Settings.EmergencyStopHotkey}" ToolTip.Tip="{DynamicResource Tooltip_EmergencyStop}" />
+      </Grid>
+      <TextBlock Text="{Binding Profiles.HotkeyStatus}" Classes="hint" TextWrapping="Wrap" ToolTip.Tip="{DynamicResource Tooltip_Shortcuts}" />
+
+      <StackPanel Spacing="7">
+        <TextBlock Text="{DynamicResource Ui_Permissions}" Classes="section" Margin="0,8,0,0" />
+        <TextBlock Text="{Binding Profiles.NativeInputStatus}" Classes="hint" TextWrapping="Wrap" />
+        <StackPanel Orientation="Horizontal" Spacing="8" IsVisible="{Binding Profiles.IsMacOS}">
+          <Button Content="{DynamicResource Ui_RequestPermission}" Command="{Binding Profiles.RequestInputPermissionCommand}" />
+          <Button Content="{DynamicResource Permission_OpenSettings}" Command="{Binding Profiles.OpenInputPermissionSettingsCommand}" />
+          <Button Content="{DynamicResource Permission_Retry}" Command="{Binding Profiles.RetryInputPermissionCommand}" />
+        </StackPanel>
+      </StackPanel>
+
+      <TextBlock Text="{DynamicResource Ui_Data}" Classes="section" Margin="0,8,0,0" />
+      <TextBlock Text="{Binding Profiles.ConfigurationDirectoryDisplay}" Classes="hint" TextTrimming="CharacterEllipsis" />
+      <StackPanel Orientation="Horizontal" Spacing="8">
+        <Button Content="{DynamicResource Ui_OpenConfiguration}" Command="{Binding Profiles.OpenConfigurationFolderCommand}" />
+        <Button Content="{DynamicResource Ui_RetrySave}" Command="{Binding Profiles.SaveNowCommand}" />
+      </StackPanel>
+      <Button Content="{DynamicResource Ui_ResetStatistics}" Command="{Binding Settings.ResetStatisticsCommand}" IsEnabled="{Binding Settings.CanResetStatistics}" HorizontalAlignment="Left" />
+      <TextBlock Text="{DynamicResource Ui_StatisticsStoppedOnly}" Classes="hint" IsVisible="{Binding !Settings.CanResetStatistics}" />
+      <TextBlock Text="{Binding Settings.StatisticsPersistenceWarning}" Classes="error" TextWrapping="Wrap" />
+
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>

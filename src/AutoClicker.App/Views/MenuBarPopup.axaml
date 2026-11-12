@@ -1,0 +1,71 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AutoClicker.App.ViewModels"
+        x:Class="AutoClicker.App.Views.MenuBarPopup"
+        x:DataType="vm:MainWindowViewModel" x:Name="PopupRoot"
+        Title="AutoClicker" Width="360" SizeToContent="Height" CanResize="False"
+        SystemDecorations="None" ShowInTaskbar="False" Topmost="True" ShowActivated="True"
+        Background="Transparent" TransparencyLevelHint="Transparent">
+  <Border Margin="10,1,10,10" Padding="16" CornerRadius="18" Background="{DynamicResource SurfaceBackground}"
+          BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" BoxShadow="0 8 28 0 #55000000">
+    <StackPanel Spacing="12">
+      <Grid ColumnDefinitions="Auto,*">
+        <Image Source="avares://AutoClicker/assets/branding/autoclicker-icon-64.png" Width="30" Height="30" Stretch="Uniform" Margin="0,0,10,0" />
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="2">
+          <TextBlock Text="AutoClicker" FontSize="16" FontWeight="SemiBold" />
+          <StackPanel Orientation="Horizontal" Spacing="6">
+            <Ellipse Width="7" Height="7" Fill="{Binding Profiles.EngineStatusBrush}" VerticalAlignment="Center" />
+            <TextBlock Text="{Binding Profiles.ProfileStatusText}" Classes="hint" TextTrimming="CharacterEllipsis" />
+          </StackPanel>
+          <TextBlock Text="{Binding Profiles.ShortcutSummary}" Classes="hint" FontSize="11" TextTrimming="CharacterEllipsis" />
+        </StackPanel>
+      </Grid>
+
+      <Border IsVisible="{Binding Profiles.ShowPermissionWarning}" Padding="10" CornerRadius="10" BorderThickness="1"
+              BorderBrush="{DynamicResource DangerBrush}">
+        <TextBlock Text="{Binding Profiles.InputPermissionStatus}" Classes="error" TextWrapping="Wrap" />
+      </Border>
+
+      <TextBlock Text="{DynamicResource Ui_Profiles}" Classes="section" Margin="0,2,0,0" />
+      <ListBox x:Name="PopupProfiles" ItemsSource="{Binding Profiles.Items}" SelectedItem="{Binding Profiles.SelectedProfile, Mode=TwoWay}"
+               Background="Transparent" BorderThickness="0" Padding="0" MaxHeight="170"
+               IsEnabled="{Binding Profiles.CanEdit}">
+        <ListBox.ItemTemplate>
+          <DataTemplate x:DataType="vm:ProfileEditorViewModel">
+            <Grid ColumnDefinitions="Auto,*,Auto,Auto">
+              <Ellipse Width="8" Height="8" Fill="{Binding ProfileColorBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+              <TextBlock Grid.Column="1" Text="{Binding Name}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+              <TextBlock Grid.Column="2" Text="★" Foreground="{DynamicResource AccentBrush}" FontSize="12" IsVisible="{Binding IsDefault}" Margin="6,0" VerticalAlignment="Center" />
+              <TextBlock Grid.Column="3" Text="{Binding HotkeyText}" Classes="hint" FontSize="11" VerticalAlignment="Center" />
+            </Grid>
+          </DataTemplate>
+        </ListBox.ItemTemplate>
+      </ListBox>
+
+      <Button Content="{Binding Profiles.EngineButtonText}" Classes="primary" Command="{Binding Profiles.ToggleEngineCommand}"
+              IsEnabled="{Binding Profiles.CanToggleEngine}" HorizontalAlignment="Stretch" MinHeight="40" FontWeight="SemiBold" />
+
+      <TextBlock Text="{DynamicResource Ui_Statistics}" Classes="section" Margin="0,2,0,0" />
+      <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+        <Border Padding="12,10" CornerRadius="12" Background="{DynamicResource SurfaceElevated}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1">
+          <StackPanel Spacing="2">
+            <TextBlock Text="{Binding Profiles.TotalClicksText}" FontSize="22" FontWeight="SemiBold" />
+            <TextBlock Text="{DynamicResource Ui_TotalClicks}" Classes="hint" />
+          </StackPanel>
+        </Border>
+        <Border Grid.Column="1" Padding="12,10" CornerRadius="12" Background="{DynamicResource SurfaceElevated}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1">
+          <StackPanel Spacing="2">
+            <TextBlock Text="{Binding Profiles.TotalActiveTimeText}" FontSize="22" FontWeight="SemiBold" />
+            <TextBlock Text="{DynamicResource Ui_ActiveTime}" Classes="hint" />
+          </StackPanel>
+        </Border>
+      </Grid>
+      <TextBlock Text="{Binding Profiles.EngineStatusText}" Classes="hint" TextWrapping="Wrap" IsVisible="{Binding Profiles.EngineBusy}" />
+
+      <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8" Margin="0,4,0,0">
+        <Button x:Name="OpenButton" Content="{DynamicResource Tray_Open}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" />
+        <Button x:Name="QuitButton" Grid.Column="1" Content="{DynamicResource Tray_Quit}" Classes="danger" HorizontalContentAlignment="Center" />
+      </Grid>
+    </StackPanel>
+  </Border>
+</Window>
