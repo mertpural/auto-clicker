@@ -1,5 +1,7 @@
 <div align="center">
 
+**Türkçe** · [English](README.en.md)
+
 <img src="docs/img/icon.png" alt="AutoClicker" width="96" height="96">
 
 # AutoClicker
