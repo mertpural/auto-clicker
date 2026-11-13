@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoClicker — Windows ve macOS için otomatik tıklayıcı</title>
+<meta name="description" content="Windows ve macOS için hafif, reklamsız otomatik tıklama aracı. Hızı, tıklama modunu ve kısayolları profiller halinde kaydedin.">
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="ds/styles.css">
+<style>
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); text-wrap: pretty; }
+  a:not(.btn) { color: var(--color-accent-700); text-decoration: none; }
+  a:not(.btn):hover { color: var(--color-accent); }
+  /* Düğme yazısı hover'da da okunur kalsın */
+  a.btn-primary, a.btn-primary:hover, a.btn-primary:focus, a.btn-primary:active { color: var(--color-bg); text-decoration: none; }
+  .plat-dark a.btn-primary, .plat-dark a.btn-primary:hover { color: var(--color-bg); }
+  a.btn-ghost:hover { color: inherit; }
+  .lab { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding-inline: clamp(20px, 5vw, 72px); }
+  .num-h { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
+  .shot { display: block; width: 100%; height: auto; }
+  .sq { width: 10px; height: 10px; background: var(--color-accent); display: block; }
+  .row { display: grid; gap: 16px clamp(24px, 4vw, 72px); padding: 36px 0; border-top: 2px solid var(--color-divider); align-items: baseline;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+  .row p { font-size: 16px; line-height: 1.65; margin: 0; color: var(--color-neutral-700); }
+  .row h2 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 26px; letter-spacing: -.01em; margin: 0; }
+  .fq { padding: 24px 0; border-top: 2px solid var(--color-divider); display: flex; flex-direction: column; gap: 10px; }
+  .fq h3 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 19px; margin: 0; }
+  .fq p { font-size: 15.5px; line-height: 1.65; margin: 0; color: var(--color-neutral-700); }
+  .plat { padding: 32px; display: flex; flex-direction: column; gap: 18px; border-right: 2px solid var(--color-divider); }
+  .plat:last-child { border-right: 0; }
+  .plat-dark { background: var(--color-text); color: var(--color-bg); }
+  .plat-dark .btn-primary { color: var(--color-bg); }
+  .mock-row { padding: 24px; border-bottom: 2px solid var(--color-neutral-700); }
+  .stat-n { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 44px; color: var(--color-accent); }
+  .stat-l { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-top: 10px; color: var(--color-neutral-700); }
+  @media (max-width: 760px) { .plat { border-right: 0; border-bottom: 2px solid var(--color-divider); } .plat:last-child { border-bottom: 0; } }
+</style>
+</head>
+<body>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+
+<nav class="nav" style="padding-inline:clamp(20px,5vw,72px)">
+  <span class="nav-brand" style="display:flex;align-items:center;gap:10px"><img src="img/logo.png" width="32" height="32" alt="" style="display:block">AutoClicker</span>
+</nav>
+
+<!-- HERO -->
+<section style="background:var(--color-text);color:var(--color-bg)">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,9vw,120px) clamp(20px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,96px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:28px">
+      <span class="lab" style="color:var(--color-accent-400)">Sürüm 1.0.0 · Windows · macOS</span>
+      <h1 style="font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(44px,6.4vw,88px);line-height:1.02;letter-spacing:-.025em;margin:0 0 0 -.05em">
+        <span style="display:block">Sen bekle.</span>
+        <span style="display:block">O tıklasın.</span>
+      </h1>
+      <p style="font-size:18px;line-height:1.6;margin:0;max-width:46ch;color:var(--color-neutral-300)">Saniyede 500 tık'a kadar hassas, hafif bir otomatik tıklayıcı. Hızı ayarla, kısayola bas, gerisini bırak.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#indir" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:12px;min-width:240px;justify-content:flex-start">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
+          İndir — Ücretsiz
+        </a>
+        <a href="#ozellikler" class="btn btn-ghost" style="color:var(--color-bg)">Nasıl çalışır →</a>
+      </div>
+      <span style="font-size:13px;color:var(--color-neutral-400)">Reklamsız · Hesap gerektirmez · Windows'ta kurulum gerektirmez</span>
+    </div>
+
+    <div style="border:2px solid var(--color-neutral-700);background:var(--color-neutral-900)">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:2px solid var(--color-neutral-700)">
+        <span class="lab" style="color:var(--color-neutral-400)">AutoClicker — Kontrol</span>
+        <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--color-neutral-300)"><span style="width:8px;height:8px;display:block;background:var(--color-accent)"></span>Hazır</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:24px;border-right:2px solid var(--color-neutral-700);border-bottom:2px solid var(--color-neutral-700)">
+          <div class="lab" style="color:var(--color-neutral-400)">Aralık</div>
+          <div class="num-h" style="font-size:40px;margin-top:8px;font-feature-settings:'tnum' 1">100<span style="font-size:16px;color:var(--color-neutral-400);margin-left:6px">ms</span></div>
+        </div>
+        <div style="padding:24px;border-bottom:2px solid var(--color-neutral-700)">
+          <div class="lab" style="color:var(--color-neutral-400)">Saniyede</div>
+          <div class="num-h" style="font-size:40px;margin-top:8px;color:var(--color-accent);font-feature-settings:'tnum' 1">10<span style="font-size:16px;color:var(--color-neutral-400);margin-left:6px">tık</span></div>
+        </div>
+      </div>
+      <div style="padding:24px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;justify-content:space-between" class="lab"><span style="color:var(--color-neutral-400)">Toplam tık</span><span style="color:var(--color-neutral-400)">Kısayol · F9</span></div>
+        <div class="num-h" style="font-size:64px;line-height:1;letter-spacing:-.02em;font-feature-settings:'tnum' 1">2.069</div>
+        <div style="height:4px;background:var(--color-neutral-700)"><div style="height:4px;background:var(--color-accent);width:40%"></div></div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--color-neutral-700)">
+          <div style="font-size:14px;padding:12px;color:var(--color-neutral-300)">Yavaş · 100</div>
+          <div style="font-size:14px;padding:12px;background:var(--color-bg);color:var(--color-text)">Orta · 100</div>
+          <div style="font-size:14px;padding:12px;color:var(--color-neutral-300)">Hızlı · 10</div>
+        </div>
+        <div class="btn btn-primary btn-block" style="justify-content:flex-start">Başlat · F9</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RAKAMLAR -->
+<section style="border-bottom:2px solid var(--color-divider)">
+  <div style="max-width:1200px;margin:0 auto;padding:48px clamp(20px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px">
+    <div><div class="stat-n">500</div><div class="stat-l">Tık / saniye · üst hız</div></div>
+    <div><div class="stat-n">2 ms</div><div class="stat-l">En kısa tıklama aralığı</div></div>
+    <div><div class="stat-n">0</div><div class="stat-l">Reklam ve izleme</div></div>
+    <div><div class="stat-n">2</div><div class="stat-l">Desteklenen platform</div></div>
+  </div>
+</section>
+
+<!-- ÖZELLİKLER -->
+<section id="ozellikler">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(20px,5vw,72px)">
+    <span class="lab" style="display:block;color:var(--color-accent-700);margin-bottom:24px">Neler yapar</span>
+    <div class="row"><div class="num-h" style="display:flex;align-items:center;gap:14px;font-size:15px"><span class="sq"></span>01</div><h2>Hassas hız</h2><p>Saniyede 0,001 ile 500 tık arasında sabit ya da rastgele aralık. Tek veya çift tıklama; sol, sağ ve orta tuş.</p></div>
+    <div class="row"><div class="num-h" style="display:flex;align-items:center;gap:14px;font-size:15px"><span class="sq"></span>02</div><h2>Kısayollar</h2><p>Başlat ve durdur için kendi tuşunuzu seçin. Basılı tutarak tıklama ve F12 ile anında acil durdurma.</p></div>
+    <div class="row"><div class="num-h" style="display:flex;align-items:center;gap:14px;font-size:15px"><span class="sq"></span>03</div><h2>Konum ve sınırlar</h2><p>İmlecin olduğu yerde ya da sabit bir noktada tıklayın. Tıklama sayısı, süre sınırı, başlangıç gecikmesi ve burst modu.</p></div>
+    <div class="row" style="border-bottom:2px solid var(--color-divider)"><div class="num-h" style="display:flex;align-items:center;gap:14px;font-size:15px"><span class="sq"></span>04</div><h2>Profiller</h2><p>Her oyun ya da uygulama için ayrı profil. Adlandırın, renklendirin, sıralayın; varsayılanı seçin. Türkçe ve İngilizce arayüz.</p></div>
+  </div>
+</section>
+
+<!-- EKRAN -->
+<section style="border-top:2px solid var(--color-divider);background:var(--color-surface, var(--color-bg))">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(20px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(32px,5vw,72px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span class="lab" style="color:var(--color-accent-700)">Uygulama</span>
+      <h2 class="num-h" style="font-size:clamp(28px,3.4vw,40px);letter-spacing:-.02em;line-height:1.1;margin:0">Profilleriniz, sizin kurallarınız.</h2>
+      <p style="font-size:16px;line-height:1.65;margin:0;color:var(--color-neutral-700)">Her profilin kendi hızı, tıklama modu ve kısayolu var. Menü çubuğu simgesinden de profil seçip başlatabilirsiniz (Mac).</p>
+    </div>
+    <div style="border:2px solid var(--color-divider)">
+      <img class="shot" src="img/profiller.png" alt="AutoClicker profil ekranı">
+    </div>
+  </div>
+</section>
+
+<!-- İNDİR -->
+<section id="indir" style="border-top:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider)">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(20px,5vw,72px);display:flex;flex-direction:column;gap:40px">
+    <div id="mobil-uyari" hidden style="border:2px solid var(--color-accent);padding:16px 18px;font-size:15px;line-height:1.6">
+      <strong>Bu uygulama bilgisayar içindir.</strong> iPhone, iPad ve Android'de çalışmaz. Bu sayfayı bir Windows veya Mac bilgisayardan açıp indirin.
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span class="lab" style="color:var(--color-accent-700)">İndir</span>
+      <h2 class="num-h" style="font-size:clamp(32px,4vw,52px);letter-spacing:-.02em;line-height:1.05;margin:0">Platformunu seç.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));border:2px solid var(--color-divider)">
+      <div class="plat plat-dark">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+          <h3 class="num-h" style="font-size:28px;margin:0">Windows</h3>
+          <span class="lab" style="opacity:.8">Taşınabilir</span>
+        </div>
+        <div style="font-size:14px;line-height:1.7;opacity:.85">Windows 10 / 11 · 64 bit<br>AutoClicker-1.0.0-win-x64-portable.zip · 44 MB</div>
+        <p style="font-size:14px;margin:0;opacity:.85">ZIP'i klasöre çıkarın, <strong>AutoClicker-Baslat.bat</strong> dosyasına çift tıklayın. Kurulum gerekmez.</p>
+        <a class="btn btn-primary btn-block" href="downloads/AutoClicker-1.0.0-win-x64-portable.zip" style="margin-top:auto">Windows için indir</a>
+      </div>
+      <div class="plat">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+          <h3 class="num-h" style="font-size:28px;margin:0">macOS</h3>
+          <span class="lab" style="opacity:.8">Apple Silicon</span>
+        </div>
+        <div style="font-size:14px;line-height:1.7;opacity:.85">M1 ve sonrası Mac<br>AutoClicker-1.0.0-macOS-arm64.dmg · 51 MB</div>
+        <p style="font-size:14px;margin:0;opacity:.85">DMG'yi açın, AutoClicker'ı <em>Uygulamalar</em> klasörüne sürükleyin.</p>
+        <a class="btn btn-primary btn-block" href="downloads/AutoClicker-1.0.0-macOS-arm64.dmg" style="margin-top:auto">macOS için indir</a>
+      </div>
+    </div>
+    <span style="font-size:13px;color:var(--color-neutral-700)">Uygulama ticari olarak imzalanmamıştır. Dosya bütünlüğü için <a href="downloads/SHA256SUMS.txt">SHA-256 özetleri</a>.</span>
+  </div>
+</section>
+
+<!-- SSS -->
+<section id="sss">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(20px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(32px,5vw,96px)">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span class="lab" style="color:var(--color-accent-700)">Sık sorulanlar</span>
+      <h2 class="num-h" style="font-size:clamp(28px,3.4vw,40px);letter-spacing:-.02em;line-height:1.1;margin:0">Kısa cevaplar.</h2>
+    </div>
+    <div>
+      <div class="fq"><h3>Ücretsiz mi?</h3><p>Evet. Tüm özellikler ücretsiz, reklamsız ve hesap gerektirmez.</p></div>
+      <div class="fq"><h3>Oyunlarda çalışır mı?</h3><p>Çoğu uygulama ve oyunda çalışır. Yönetici yetkisiyle açılan programlar ve bazı oyunların koruma sistemleri otomatik tıklamayı engelleyebilir.</p></div>
+      <div class="fq" style="border-bottom:2px solid var(--color-divider)"><h3>Uyarı çıkıyor, güvenli mi?</h3><p>Uygulama ticari bir sertifikayla imzalanmadığı için Uygulama ticari bir sertifikayla imzalanmadığı için Windows SmartScreen ve macOS ilk açılışta uyarı verebilir. Mac'te sağ tıklayıp <em>Aç</em>'ı seçin; Windows'ta <em>Ek bilgi → Yine de çalıştır</em> deyin.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- KAPANIŞ -->
+<section style="background:var(--color-accent);color:var(--color-bg)">
+  <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,128px) clamp(20px,5vw,72px)">
+    <h2 class="num-h" style="font-size:clamp(40px,5.4vw,76px);line-height:1.04;letter-spacing:-.02em;margin:0 0 0 -.05em"><span style="display:block">Bir kez kur.</span><span style="display:block">Bir daha tıklama.</span></h2>
+  </div>
+</section>
+
+<footer style="max-width:1200px;width:100%;box-sizing:border-box;margin:0 auto;padding:32px clamp(20px,5vw,72px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--color-neutral-700)">
+  <span>© 2026 AutoClicker · Sürüm 1.0.0</span>
+  <a href="downloads/SHA256SUMS.txt" style="color:var(--color-neutral-700)">SHA-256</a>
+</footer>
+</div>
+<script>
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+    document.getElementById('mobil-uyari').hidden = false;
+  }
+</script>
+</body>
+</html>
